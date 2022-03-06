@@ -1,0 +1,955 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		966D8DD6278F2AA600F2B092 /* leftScaleAlpha.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 966D8DD5278F2AA600F2B092 /* leftScaleAlpha.mp4 */; };
+		969E8E5D2780CD9E00EFD90F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8E5C2780CD9E00EFD90F /* AppDelegate.m */; };
+		969E8E632780CD9E00EFD90F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8E622780CD9E00EFD90F /* ViewController.m */; };
+		969E8E662780CD9E00EFD90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 969E8E642780CD9E00EFD90F /* Main.storyboard */; };
+		969E8E682780CD9F00EFD90F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969E8E672780CD9F00EFD90F /* Assets.xcassets */; };
+		969E8E6B2780CD9F00EFD90F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 969E8E692780CD9F00EFD90F /* LaunchScreen.storyboard */; };
+		969E8E6E2780CD9F00EFD90F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8E6D2780CD9F00EFD90F /* main.m */; };
+		969E8F872780D04200EFD90F /* I420_1120x1120.yuv in Resources */ = {isa = PBXBuildFile; fileRef = 969E8F6E2780D04200EFD90F /* I420_1120x1120.yuv */; };
+		969E8F882780D04200EFD90F /* rgba8_1125x1125.rgba in Resources */ = {isa = PBXBuildFile; fileRef = 969E8F6F2780D04200EFD90F /* rgba8_1125x1125.rgba */; };
+		969E8F892780D04200EFD90F /* bgra8_1125x1125.bgra in Resources */ = {isa = PBXBuildFile; fileRef = 969E8F702780D04200EFD90F /* bgra8_1125x1125.bgra */; };
+		969E8F8A2780D04200EFD90F /* nv21_1120x1120.yuv in Resources */ = {isa = PBXBuildFile; fileRef = 969E8F712780D04200EFD90F /* nv21_1120x1120.yuv */; };
+		969E8F8B2780D04200EFD90F /* nv12_1120x1120.yuv in Resources */ = {isa = PBXBuildFile; fileRef = 969E8F722780D04200EFD90F /* nv12_1120x1120.yuv */; };
+		969E8F8C2780D04200EFD90F /* nv12_1120x1120_bgra.yuv in Resources */ = {isa = PBXBuildFile; fileRef = 969E8F732780D04200EFD90F /* nv12_1120x1120_bgra.yuv */; };
+		969E901C2780D05100EFD90F /* CGMetalDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8F982780D05100EFD90F /* CGMetalDevice.m */; };
+		969E901D2780D05100EFD90F /* CGMetalQueueContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8F992780D05100EFD90F /* CGMetalQueueContext.m */; };
+		969E901E2780D05100EFD90F /* MTLMetalCompute.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8F9A2780D05100EFD90F /* MTLMetalCompute.m */; };
+		969E901F2780D05100EFD90F /* CGMetalTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8F9B2780D05100EFD90F /* CGMetalTexture.m */; };
+		969E90202780D05100EFD90F /* compute.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8F9D2780D05100EFD90F /* compute.metal */; };
+		969E90212780D05100EFD90F /* CGMetalOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FA12780D05100EFD90F /* CGMetalOutput.m */; };
+		969E90222780D05100EFD90F /* CGMetalBufferProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FA62780D05100EFD90F /* CGMetalBufferProvider.m */; };
+		969E90232780D05100EFD90F /* CGMetalSourfaceTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FA72780D05100EFD90F /* CGMetalSourfaceTexture.m */; };
+		969E90242780D05100EFD90F /* CGMetalContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FA92780D05100EFD90F /* CGMetalContext.m */; };
+		969E90252780D05100EFD90F /* CGMetalRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FAC2780D05100EFD90F /* CGMetalRender.m */; };
+		969E90262780D05100EFD90F /* CGMetalBlit.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FAD2780D05100EFD90F /* CGMetalBlit.m */; };
+		969E90272780D05100EFD90F /* CGMetalOutputter.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FAE2780D05100EFD90F /* CGMetalOutputter.m */; };
+		969E90282780D05100EFD90F /* CGMetalPlayerInputMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FB02780D05100EFD90F /* CGMetalPlayerInputMac.m */; };
+		969E90292780D05100EFD90F /* CGMetalPixelBufferInput.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FB22780D05100EFD90F /* CGMetalPixelBufferInput.metal */; };
+		969E902A2780D05100EFD90F /* CGMetalTextureInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FB72780D05100EFD90F /* CGMetalTextureInput.m */; };
+		969E902B2780D05100EFD90F /* CGMetalPixelBufferInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FB82780D05100EFD90F /* CGMetalPixelBufferInput.m */; };
+		969E902C2780D05100EFD90F /* CGMetalImageInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FBB2780D05100EFD90F /* CGMetalImageInput.m */; };
+		969E902D2780D05100EFD90F /* CGMetalVideoInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FBC2780D05100EFD90F /* CGMetalVideoInput.m */; };
+		969E902E2780D05100EFD90F /* CGMetalRawDataInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FBE2780D05100EFD90F /* CGMetalRawDataInput.m */; };
+		969E902F2780D05100EFD90F /* CGMetalCameraInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FBF2780D05100EFD90F /* CGMetalCameraInput.m */; };
+		969E90302780D05100EFD90F /* CGMetalOpenGLInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FC02780D05100EFD90F /* CGMetalOpenGLInput.m */; };
+		969E90312780D05100EFD90F /* CGMetalRawDataInput.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FC12780D05100EFD90F /* CGMetalRawDataInput.metal */; };
+		969E90322780D05100EFD90F /* CGMetalPlayerInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FC52780D05100EFD90F /* CGMetalPlayerInput.m */; };
+		969E90332780D05100EFD90F /* CGMetalFlashWhite.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FCC2780D05100EFD90F /* CGMetalFlashWhite.metal */; };
+		969E90342780D05100EFD90F /* CGMetalShake.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FCD2780D05100EFD90F /* CGMetalShake.metal */; };
+		969E90352780D05100EFD90F /* CGMetalFlashWhite.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FCF2780D05100EFD90F /* CGMetalFlashWhite.m */; };
+		969E90362780D05100EFD90F /* CGMetalSoul.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FD02780D05100EFD90F /* CGMetalSoul.metal */; };
+		969E90372780D05100EFD90F /* CGMetalSoul.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FD22780D05100EFD90F /* CGMetalSoul.m */; };
+		969E90382780D05100EFD90F /* CGMetalColour.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FD32780D05100EFD90F /* CGMetalColour.m */; };
+		969E90392780D05100EFD90F /* CGMetalGray.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FD42780D05100EFD90F /* CGMetalGray.m */; };
+		969E903A2780D05100EFD90F /* CGMetalShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FD52780D05100EFD90F /* CGMetalShake.m */; };
+		969E903B2780D05100EFD90F /* CGMetalBlendAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FD62780D05100EFD90F /* CGMetalBlendAlpha.m */; };
+		969E903C2780D05100EFD90F /* CGMetalColour.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FD72780D05100EFD90F /* CGMetalColour.metal */; };
+		969E903D2780D05100EFD90F /* CGMetalGray.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FD82780D05100EFD90F /* CGMetalGray.metal */; };
+		969E903E2780D05100EFD90F /* CGMetalGlitch.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FD92780D05100EFD90F /* CGMetalGlitch.metal */; };
+		969E903F2780D05100EFD90F /* CGMetalBlendAlpha.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FDC2780D05100EFD90F /* CGMetalBlendAlpha.metal */; };
+		969E90402780D05100EFD90F /* CGMetalGlitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FDF2780D05100EFD90F /* CGMetalGlitch.m */; };
+		969E90412780D05100EFD90F /* CGMetalBasicFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FE02780D05100EFD90F /* CGMetalBasicFour.m */; };
+		969E90422780D05100EFD90F /* CGMetalBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FE32780D05100EFD90F /* CGMetalBasic.m */; };
+		969E90432780D05100EFD90F /* CGMetalBasic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FE42780D05100EFD90F /* CGMetalBasic.metal */; };
+		969E90442780D05100EFD90F /* CGMetalBasicTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FE52780D05100EFD90F /* CGMetalBasicTwo.m */; };
+		969E90452780D05100EFD90F /* CGMetalBasicThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FE62780D05100EFD90F /* CGMetalBasicThree.m */; };
+		969E90462780D05100EFD90F /* CGMetalFlipY.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FE82780D05100EFD90F /* CGMetalFlipY.metal */; };
+		969E90472780D05100EFD90F /* CGMetalFlipX.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FEA2780D05100EFD90F /* CGMetalFlipX.m */; };
+		969E90482780D05100EFD90F /* AePaintReSizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FEC2780D05100EFD90F /* AePaintReSizeFilter.m */; };
+		969E90492780D05100EFD90F /* CGMetalRotate.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FED2780D05100EFD90F /* CGMetalRotate.metal */; };
+		969E904A2780D05100EFD90F /* CGMetalFlipX.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FEF2780D05100EFD90F /* CGMetalFlipX.metal */; };
+		969E904B2780D05100EFD90F /* CGMetalTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FF12780D05100EFD90F /* CGMetalTranslation.m */; };
+		969E904C2780D05100EFD90F /* CGMetalRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FF52780D05100EFD90F /* CGMetalRotate.m */; };
+		969E904D2780D05100EFD90F /* CGMetalZoom.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FF62780D05100EFD90F /* CGMetalZoom.metal */; };
+		969E904E2780D05100EFD90F /* CGMetalReSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FF72780D05100EFD90F /* CGMetalReSize.m */; };
+		969E904F2780D05100EFD90F /* CGMetalZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FFA2780D05100EFD90F /* CGMetalZoom.m */; };
+		969E90502780D05100EFD90F /* CGMetalProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FFB2780D05100EFD90F /* CGMetalProjection.m */; };
+		969E90512780D05100EFD90F /* CGMetalFlipY.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FFD2780D05100EFD90F /* CGMetalFlipY.m */; };
+		969E90532780D05100EFD90F /* CGMetalCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8FFF2780D05100EFD90F /* CGMetalCrop.m */; };
+		969E90542780D05100EFD90F /* CGMetalImageOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90042780D05100EFD90F /* CGMetalImageOutput.m */; };
+		969E90552780D05100EFD90F /* CGMetalPixelBufferOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90062780D05100EFD90F /* CGMetalPixelBufferOutput.m */; };
+		969E90562780D05100EFD90F /* CGMetalTextureOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90072780D05100EFD90F /* CGMetalTextureOutput.m */; };
+		969E90572780D05100EFD90F /* CGMetalRawDataOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E900A2780D05100EFD90F /* CGMetalRawDataOutput.m */; };
+		969E90582780D05100EFD90F /* CGMetalOpenGLOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E900D2780D05100EFD90F /* CGMetalOpenGLOutput.m */; };
+		969E90592780D05100EFD90F /* CGMetalVideoOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E900F2780D05100EFD90F /* CGMetalVideoOutput.m */; };
+		969E905A2780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E90102780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.metal */; };
+		969E905B2780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90112780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.m */; };
+		969E905C2780D05100EFD90F /* CGMetalLayerOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90152780D05100EFD90F /* CGMetalLayerOutput.m */; };
+		969E905D2780D05100EFD90F /* CGMetalView.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E90162780D05100EFD90F /* CGMetalView.metal */; };
+		969E905E2780D05100EFD90F /* CGMetalNSViewOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90172780D05100EFD90F /* CGMetalNSViewOutput.m */; };
+		969E905F2780D05100EFD90F /* CGMetalUIViewOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90192780D05100EFD90F /* CGMetalUIViewOutput.m */; };
+		969E90602780D14B00EFD90F /* CGMetal.h in Sources */ = {isa = PBXBuildFile; fileRef = 969E901B2780D05100EFD90F /* CGMetal.h */; };
+		969E90942780D83000EFD90F /* CGMetalTranslation.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E90932780D82F00EFD90F /* CGMetalTranslation.metal */; };
+		969E90972780DAD800EFD90F /* CGMetalWobble.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90962780DAD800EFD90F /* CGMetalWobble.m */; };
+		969E90992780DAE100EFD90F /* CGMetalWobble.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E90982780DAE100EFD90F /* CGMetalWobble.metal */; };
+		969E90B32780DDB300EFD90F /* CGMetalEncodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90A32780DDB300EFD90F /* CGMetalEncodeController.m */; };
+		969E90B42780DDB300EFD90F /* CGMetalListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90A42780DDB300EFD90F /* CGMetalListController.m */; };
+		969E90B52780DDB300EFD90F /* CGPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90A52780DDB300EFD90F /* CGPreviewController.m */; };
+		969E90B62780DDB300EFD90F /* CGMetalSourceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90AA2780DDB300EFD90F /* CGMetalSourceProvider.m */; };
+		969E90B72780DDB300EFD90F /* CGMetalShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90AE2780DDB300EFD90F /* CGMetalShowController.m */; };
+		969E90B82780DDB300EFD90F /* CGMetalSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90AF2780DDB300EFD90F /* CGMetalSourceController.m */; };
+		969E90B92780DDB300EFD90F /* CGMetalCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90B02780DDB300EFD90F /* CGMetalCameraController.m */; };
+		969E90BA2780DDB300EFD90F /* CGMetalVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E90B22780DDB300EFD90F /* CGMetalVideoController.m */; };
+		969E90BC2780E48C00EFD90F /* CGMetalProjection.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E90BB2780E48C00EFD90F /* CGMetalProjection.metal */; };
+		969E92E02783302A00EFD90F /* CGMetalBlendScaleAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E92DF2783302A00EFD90F /* CGMetalBlendScaleAlpha.m */; };
+		969E92F82783321D00EFD90F /* CGMetalScaleAlpha.metal in Sources */ = {isa = PBXBuildFile; fileRef = 969E92F52783321D00EFD90F /* CGMetalScaleAlpha.metal */; };
+		969E92F92783321D00EFD90F /* CGMetalScaleAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E92F72783321D00EFD90F /* CGMetalScaleAlpha.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		966D8DD5278F2AA600F2B092 /* leftScaleAlpha.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = leftScaleAlpha.mp4; sourceTree = "<group>"; };
+		969E8E582780CD9E00EFD90F /* CGMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		969E8E5B2780CD9E00EFD90F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		969E8E5C2780CD9E00EFD90F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		969E8E612780CD9E00EFD90F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		969E8E622780CD9E00EFD90F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		969E8E652780CD9E00EFD90F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		969E8E672780CD9F00EFD90F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		969E8E6A2780CD9F00EFD90F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		969E8E6C2780CD9F00EFD90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		969E8E6D2780CD9F00EFD90F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		969E8F6E2780D04200EFD90F /* I420_1120x1120.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = I420_1120x1120.yuv; sourceTree = "<group>"; };
+		969E8F6F2780D04200EFD90F /* rgba8_1125x1125.rgba */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rgba8_1125x1125.rgba; sourceTree = "<group>"; };
+		969E8F702780D04200EFD90F /* bgra8_1125x1125.bgra */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bgra8_1125x1125.bgra; sourceTree = "<group>"; };
+		969E8F712780D04200EFD90F /* nv21_1120x1120.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nv21_1120x1120.yuv; sourceTree = "<group>"; };
+		969E8F722780D04200EFD90F /* nv12_1120x1120.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nv12_1120x1120.yuv; sourceTree = "<group>"; };
+		969E8F732780D04200EFD90F /* nv12_1120x1120_bgra.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nv12_1120x1120_bgra.yuv; sourceTree = "<group>"; };
+		969E8F972780D05100EFD90F /* CGMetalBufferProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalBufferProvider.h; sourceTree = "<group>"; };
+		969E8F982780D05100EFD90F /* CGMetalDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalDevice.m; sourceTree = "<group>"; };
+		969E8F992780D05100EFD90F /* CGMetalQueueContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalQueueContext.m; sourceTree = "<group>"; };
+		969E8F9A2780D05100EFD90F /* MTLMetalCompute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLMetalCompute.m; sourceTree = "<group>"; };
+		969E8F9B2780D05100EFD90F /* CGMetalTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalTexture.m; sourceTree = "<group>"; };
+		969E8F9C2780D05100EFD90F /* CGMetalContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalContext.h; sourceTree = "<group>"; };
+		969E8F9D2780D05100EFD90F /* compute.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = compute.metal; sourceTree = "<group>"; };
+		969E8F9E2780D05100EFD90F /* CGMetalSourfaceTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalSourfaceTexture.h; sourceTree = "<group>"; };
+		969E8F9F2780D05100EFD90F /* CGMetalRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalRender.h; sourceTree = "<group>"; };
+		969E8FA02780D05100EFD90F /* CGMetalBlit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalBlit.h; sourceTree = "<group>"; };
+		969E8FA12780D05100EFD90F /* CGMetalOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalOutput.m; sourceTree = "<group>"; };
+		969E8FA22780D05100EFD90F /* CGMetalOutputter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalOutputter.h; sourceTree = "<group>"; };
+		969E8FA32780D05100EFD90F /* CGMetalQueueContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalQueueContext.h; sourceTree = "<group>"; };
+		969E8FA42780D05100EFD90F /* CGMetalDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalDevice.h; sourceTree = "<group>"; };
+		969E8FA52780D05100EFD90F /* CGMetalInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalInput.h; sourceTree = "<group>"; };
+		969E8FA62780D05100EFD90F /* CGMetalBufferProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalBufferProvider.m; sourceTree = "<group>"; };
+		969E8FA72780D05100EFD90F /* CGMetalSourfaceTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalSourfaceTexture.m; sourceTree = "<group>"; };
+		969E8FA82780D05100EFD90F /* CGMetalTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalTexture.h; sourceTree = "<group>"; };
+		969E8FA92780D05100EFD90F /* CGMetalContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalContext.m; sourceTree = "<group>"; };
+		969E8FAA2780D05100EFD90F /* MTLMetalCompute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLMetalCompute.h; sourceTree = "<group>"; };
+		969E8FAB2780D05100EFD90F /* CGMetalOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalOutput.h; sourceTree = "<group>"; };
+		969E8FAC2780D05100EFD90F /* CGMetalRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalRender.m; sourceTree = "<group>"; };
+		969E8FAD2780D05100EFD90F /* CGMetalBlit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalBlit.m; sourceTree = "<group>"; };
+		969E8FAE2780D05100EFD90F /* CGMetalOutputter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalOutputter.m; sourceTree = "<group>"; };
+		969E8FB02780D05100EFD90F /* CGMetalPlayerInputMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalPlayerInputMac.m; sourceTree = "<group>"; };
+		969E8FB12780D05100EFD90F /* CGMetalVideoInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalVideoInput.h; sourceTree = "<group>"; };
+		969E8FB22780D05100EFD90F /* CGMetalPixelBufferInput.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalPixelBufferInput.metal; sourceTree = "<group>"; };
+		969E8FB32780D05100EFD90F /* CGMetalOpenGLInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalOpenGLInput.h; sourceTree = "<group>"; };
+		969E8FB42780D05100EFD90F /* CGMetalCameraInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalCameraInput.h; sourceTree = "<group>"; };
+		969E8FB52780D05100EFD90F /* CGMetalRawDataInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalRawDataInput.h; sourceTree = "<group>"; };
+		969E8FB72780D05100EFD90F /* CGMetalTextureInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalTextureInput.m; sourceTree = "<group>"; };
+		969E8FB82780D05100EFD90F /* CGMetalPixelBufferInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalPixelBufferInput.m; sourceTree = "<group>"; };
+		969E8FB92780D05100EFD90F /* CGMetalPlayerInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalPlayerInput.h; sourceTree = "<group>"; };
+		969E8FBB2780D05100EFD90F /* CGMetalImageInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalImageInput.m; sourceTree = "<group>"; };
+		969E8FBC2780D05100EFD90F /* CGMetalVideoInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalVideoInput.m; sourceTree = "<group>"; };
+		969E8FBD2780D05100EFD90F /* CGMetalPlayerInputMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalPlayerInputMac.h; sourceTree = "<group>"; };
+		969E8FBE2780D05100EFD90F /* CGMetalRawDataInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalRawDataInput.m; sourceTree = "<group>"; };
+		969E8FBF2780D05100EFD90F /* CGMetalCameraInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalCameraInput.m; sourceTree = "<group>"; };
+		969E8FC02780D05100EFD90F /* CGMetalOpenGLInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalOpenGLInput.m; sourceTree = "<group>"; };
+		969E8FC12780D05100EFD90F /* CGMetalRawDataInput.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalRawDataInput.metal; sourceTree = "<group>"; };
+		969E8FC22780D05100EFD90F /* CGMetalTextureInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalTextureInput.h; sourceTree = "<group>"; };
+		969E8FC32780D05100EFD90F /* CGMetalPixelBufferInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalPixelBufferInput.h; sourceTree = "<group>"; };
+		969E8FC42780D05100EFD90F /* CGMetalImageInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalImageInput.h; sourceTree = "<group>"; };
+		969E8FC52780D05100EFD90F /* CGMetalPlayerInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalPlayerInput.m; sourceTree = "<group>"; };
+		969E8FC82780D05100EFD90F /* CGMetalBasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalBasic.h; sourceTree = "<group>"; };
+		969E8FC92780D05100EFD90F /* CGMetalBasicTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalBasicTwo.h; sourceTree = "<group>"; };
+		969E8FCB2780D05100EFD90F /* CGMetalShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalShake.h; sourceTree = "<group>"; };
+		969E8FCC2780D05100EFD90F /* CGMetalFlashWhite.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalFlashWhite.metal; sourceTree = "<group>"; };
+		969E8FCD2780D05100EFD90F /* CGMetalShake.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalShake.metal; sourceTree = "<group>"; };
+		969E8FCE2780D05100EFD90F /* CGMetalBlendAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalBlendAlpha.h; sourceTree = "<group>"; };
+		969E8FCF2780D05100EFD90F /* CGMetalFlashWhite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalFlashWhite.m; sourceTree = "<group>"; };
+		969E8FD02780D05100EFD90F /* CGMetalSoul.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalSoul.metal; sourceTree = "<group>"; };
+		969E8FD12780D05100EFD90F /* CGMetalGlitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalGlitch.h; sourceTree = "<group>"; };
+		969E8FD22780D05100EFD90F /* CGMetalSoul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalSoul.m; sourceTree = "<group>"; };
+		969E8FD32780D05100EFD90F /* CGMetalColour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalColour.m; sourceTree = "<group>"; };
+		969E8FD42780D05100EFD90F /* CGMetalGray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalGray.m; sourceTree = "<group>"; };
+		969E8FD52780D05100EFD90F /* CGMetalShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalShake.m; sourceTree = "<group>"; };
+		969E8FD62780D05100EFD90F /* CGMetalBlendAlpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalBlendAlpha.m; sourceTree = "<group>"; };
+		969E8FD72780D05100EFD90F /* CGMetalColour.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalColour.metal; sourceTree = "<group>"; };
+		969E8FD82780D05100EFD90F /* CGMetalGray.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalGray.metal; sourceTree = "<group>"; };
+		969E8FD92780D05100EFD90F /* CGMetalGlitch.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalGlitch.metal; sourceTree = "<group>"; };
+		969E8FDA2780D05100EFD90F /* CGMetalFlashWhite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalFlashWhite.h; sourceTree = "<group>"; };
+		969E8FDB2780D05100EFD90F /* CGMetalGray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalGray.h; sourceTree = "<group>"; };
+		969E8FDC2780D05100EFD90F /* CGMetalBlendAlpha.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalBlendAlpha.metal; sourceTree = "<group>"; };
+		969E8FDD2780D05100EFD90F /* CGMetalColour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalColour.h; sourceTree = "<group>"; };
+		969E8FDE2780D05100EFD90F /* CGMetalSoul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalSoul.h; sourceTree = "<group>"; };
+		969E8FDF2780D05100EFD90F /* CGMetalGlitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalGlitch.m; sourceTree = "<group>"; };
+		969E8FE02780D05100EFD90F /* CGMetalBasicFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalBasicFour.m; sourceTree = "<group>"; };
+		969E8FE12780D05100EFD90F /* CGMetalBasicThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalBasicThree.h; sourceTree = "<group>"; };
+		969E8FE22780D05100EFD90F /* CGMetalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalHeader.h; sourceTree = "<group>"; };
+		969E8FE32780D05100EFD90F /* CGMetalBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalBasic.m; sourceTree = "<group>"; };
+		969E8FE42780D05100EFD90F /* CGMetalBasic.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalBasic.metal; sourceTree = "<group>"; };
+		969E8FE52780D05100EFD90F /* CGMetalBasicTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalBasicTwo.m; sourceTree = "<group>"; };
+		969E8FE62780D05100EFD90F /* CGMetalBasicThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalBasicThree.m; sourceTree = "<group>"; };
+		969E8FE82780D05100EFD90F /* CGMetalFlipY.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalFlipY.metal; sourceTree = "<group>"; };
+		969E8FE92780D05100EFD90F /* CGMetalRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalRotate.h; sourceTree = "<group>"; };
+		969E8FEA2780D05100EFD90F /* CGMetalFlipX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalFlipX.m; sourceTree = "<group>"; };
+		969E8FEB2780D05100EFD90F /* CGMetalReSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalReSize.h; sourceTree = "<group>"; };
+		969E8FEC2780D05100EFD90F /* AePaintReSizeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AePaintReSizeFilter.m; sourceTree = "<group>"; };
+		969E8FED2780D05100EFD90F /* CGMetalRotate.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalRotate.metal; sourceTree = "<group>"; };
+		969E8FEE2780D05100EFD90F /* CGMetalProjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalProjection.h; sourceTree = "<group>"; };
+		969E8FEF2780D05100EFD90F /* CGMetalFlipX.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalFlipX.metal; sourceTree = "<group>"; };
+		969E8FF02780D05100EFD90F /* CGMetalZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalZoom.h; sourceTree = "<group>"; };
+		969E8FF12780D05100EFD90F /* CGMetalTranslation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalTranslation.m; sourceTree = "<group>"; };
+		969E8FF22780D05100EFD90F /* CGMetalCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalCrop.h; sourceTree = "<group>"; };
+		969E8FF42780D05100EFD90F /* CGMetalFlipY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalFlipY.h; sourceTree = "<group>"; };
+		969E8FF52780D05100EFD90F /* CGMetalRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalRotate.m; sourceTree = "<group>"; };
+		969E8FF62780D05100EFD90F /* CGMetalZoom.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalZoom.metal; sourceTree = "<group>"; };
+		969E8FF72780D05100EFD90F /* CGMetalReSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalReSize.m; sourceTree = "<group>"; };
+		969E8FF82780D05100EFD90F /* CGMetalFlipX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalFlipX.h; sourceTree = "<group>"; };
+		969E8FF92780D05100EFD90F /* CGMetalTranslation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalTranslation.h; sourceTree = "<group>"; };
+		969E8FFA2780D05100EFD90F /* CGMetalZoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalZoom.m; sourceTree = "<group>"; };
+		969E8FFB2780D05100EFD90F /* CGMetalProjection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalProjection.m; sourceTree = "<group>"; };
+		969E8FFC2780D05100EFD90F /* AePaintReSizeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AePaintReSizeFilter.h; sourceTree = "<group>"; };
+		969E8FFD2780D05100EFD90F /* CGMetalFlipY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalFlipY.m; sourceTree = "<group>"; };
+		969E8FFF2780D05100EFD90F /* CGMetalCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalCrop.m; sourceTree = "<group>"; };
+		969E90002780D05100EFD90F /* CGMetalBasicFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalBasicFour.h; sourceTree = "<group>"; };
+		969E90032780D05100EFD90F /* CGMetalTextureOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalTextureOutput.h; sourceTree = "<group>"; };
+		969E90042780D05100EFD90F /* CGMetalImageOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalImageOutput.m; sourceTree = "<group>"; };
+		969E90052780D05100EFD90F /* CGMetalRawDataOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalRawDataOutput.h; sourceTree = "<group>"; };
+		969E90062780D05100EFD90F /* CGMetalPixelBufferOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalPixelBufferOutput.m; sourceTree = "<group>"; };
+		969E90072780D05100EFD90F /* CGMetalTextureOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalTextureOutput.m; sourceTree = "<group>"; };
+		969E90082780D05100EFD90F /* CGMetalImageOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalImageOutput.h; sourceTree = "<group>"; };
+		969E90092780D05100EFD90F /* CGMetalPixelBufferOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalPixelBufferOutput.h; sourceTree = "<group>"; };
+		969E900A2780D05100EFD90F /* CGMetalRawDataOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalRawDataOutput.m; sourceTree = "<group>"; };
+		969E900C2780D05100EFD90F /* CGMetalVideoOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalVideoOutput.h; sourceTree = "<group>"; };
+		969E900D2780D05100EFD90F /* CGMetalOpenGLOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalOpenGLOutput.m; sourceTree = "<group>"; };
+		969E900E2780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalPixelBufferSurfaceOutput.h; sourceTree = "<group>"; };
+		969E900F2780D05100EFD90F /* CGMetalVideoOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalVideoOutput.m; sourceTree = "<group>"; };
+		969E90102780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalPixelBufferSurfaceOutput.metal; sourceTree = "<group>"; };
+		969E90112780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalPixelBufferSurfaceOutput.m; sourceTree = "<group>"; };
+		969E90122780D05100EFD90F /* CGMetalOpenGLOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalOpenGLOutput.h; sourceTree = "<group>"; };
+		969E90142780D05100EFD90F /* CGMetalUIViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalUIViewOutput.h; sourceTree = "<group>"; };
+		969E90152780D05100EFD90F /* CGMetalLayerOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalLayerOutput.m; sourceTree = "<group>"; };
+		969E90162780D05100EFD90F /* CGMetalView.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalView.metal; sourceTree = "<group>"; };
+		969E90172780D05100EFD90F /* CGMetalNSViewOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalNSViewOutput.m; sourceTree = "<group>"; };
+		969E90182780D05100EFD90F /* CGMetalLayerOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalLayerOutput.h; sourceTree = "<group>"; };
+		969E90192780D05100EFD90F /* CGMetalUIViewOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalUIViewOutput.m; sourceTree = "<group>"; };
+		969E901A2780D05100EFD90F /* CGMetalNSViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalNSViewOutput.h; sourceTree = "<group>"; };
+		969E901B2780D05100EFD90F /* CGMetal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetal.h; sourceTree = "<group>"; };
+		969E90932780D82F00EFD90F /* CGMetalTranslation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CGMetalTranslation.metal; sourceTree = "<group>"; };
+		969E90952780DAD800EFD90F /* CGMetalWobble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGMetalWobble.h; sourceTree = "<group>"; };
+		969E90962780DAD800EFD90F /* CGMetalWobble.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGMetalWobble.m; sourceTree = "<group>"; };
+		969E90982780DAE100EFD90F /* CGMetalWobble.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CGMetalWobble.metal; sourceTree = "<group>"; };
+		969E90A32780DDB300EFD90F /* CGMetalEncodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalEncodeController.m; sourceTree = "<group>"; };
+		969E90A42780DDB300EFD90F /* CGMetalListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalListController.m; sourceTree = "<group>"; };
+		969E90A52780DDB300EFD90F /* CGPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPreviewController.m; sourceTree = "<group>"; };
+		969E90A62780DDB300EFD90F /* CGMetalCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalCameraController.h; sourceTree = "<group>"; };
+		969E90A72780DDB300EFD90F /* CGMetalSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalSourceController.h; sourceTree = "<group>"; };
+		969E90A82780DDB300EFD90F /* CGMetalShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalShowController.h; sourceTree = "<group>"; };
+		969E90A92780DDB300EFD90F /* CGMetalVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalVideoController.h; sourceTree = "<group>"; };
+		969E90AA2780DDB300EFD90F /* CGMetalSourceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalSourceProvider.m; sourceTree = "<group>"; };
+		969E90AB2780DDB300EFD90F /* CGMetalEncodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalEncodeController.h; sourceTree = "<group>"; };
+		969E90AC2780DDB300EFD90F /* CGPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPreviewController.h; sourceTree = "<group>"; };
+		969E90AD2780DDB300EFD90F /* CGMetalListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalListController.h; sourceTree = "<group>"; };
+		969E90AE2780DDB300EFD90F /* CGMetalShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalShowController.m; sourceTree = "<group>"; };
+		969E90AF2780DDB300EFD90F /* CGMetalSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalSourceController.m; sourceTree = "<group>"; };
+		969E90B02780DDB300EFD90F /* CGMetalCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalCameraController.m; sourceTree = "<group>"; };
+		969E90B12780DDB300EFD90F /* CGMetalSourceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalSourceProvider.h; sourceTree = "<group>"; };
+		969E90B22780DDB300EFD90F /* CGMetalVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalVideoController.m; sourceTree = "<group>"; };
+		969E90BB2780E48C00EFD90F /* CGMetalProjection.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CGMetalProjection.metal; sourceTree = "<group>"; };
+		969E92DE2783302A00EFD90F /* CGMetalBlendScaleAlpha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGMetalBlendScaleAlpha.h; sourceTree = "<group>"; };
+		969E92DF2783302A00EFD90F /* CGMetalBlendScaleAlpha.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGMetalBlendScaleAlpha.m; sourceTree = "<group>"; };
+		969E92F52783321D00EFD90F /* CGMetalScaleAlpha.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalScaleAlpha.metal; sourceTree = "<group>"; };
+		969E92F62783321D00EFD90F /* CGMetalScaleAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalScaleAlpha.h; sourceTree = "<group>"; };
+		969E92F72783321D00EFD90F /* CGMetalScaleAlpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalScaleAlpha.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		969E8E552780CD9E00EFD90F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		969E8E4F2780CD9D00EFD90F = {
+			isa = PBXGroup;
+			children = (
+				969E8E5A2780CD9E00EFD90F /* CGMetal */,
+				969E8E592780CD9E00EFD90F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		969E8E592780CD9E00EFD90F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				969E8E582780CD9E00EFD90F /* CGMetal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		969E8E5A2780CD9E00EFD90F /* CGMetal */ = {
+			isa = PBXGroup;
+			children = (
+				969E90A22780DDB300EFD90F /* Example */,
+				969E8F952780D05100EFD90F /* Source */,
+				969E8F6B2780D04200EFD90F /* Resources */,
+				969E8E5B2780CD9E00EFD90F /* AppDelegate.h */,
+				969E8E5C2780CD9E00EFD90F /* AppDelegate.m */,
+				969E8E612780CD9E00EFD90F /* ViewController.h */,
+				969E8E622780CD9E00EFD90F /* ViewController.m */,
+				969E8E642780CD9E00EFD90F /* Main.storyboard */,
+				969E8E672780CD9F00EFD90F /* Assets.xcassets */,
+				969E8E692780CD9F00EFD90F /* LaunchScreen.storyboard */,
+				969E8E6C2780CD9F00EFD90F /* Info.plist */,
+				969E8E6D2780CD9F00EFD90F /* main.m */,
+			);
+			path = CGMetal;
+			sourceTree = "<group>";
+		};
+		969E8F6B2780D04200EFD90F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				966D8DD5278F2AA600F2B092 /* leftScaleAlpha.mp4 */,
+				969E8F6E2780D04200EFD90F /* I420_1120x1120.yuv */,
+				969E8F6F2780D04200EFD90F /* rgba8_1125x1125.rgba */,
+				969E8F702780D04200EFD90F /* bgra8_1125x1125.bgra */,
+				969E8F712780D04200EFD90F /* nv21_1120x1120.yuv */,
+				969E8F722780D04200EFD90F /* nv12_1120x1120.yuv */,
+				969E8F732780D04200EFD90F /* nv12_1120x1120_bgra.yuv */,
+			);
+			name = Resources;
+			path = ../../CGMetaliOS/CGMetaliOS/Resources;
+			sourceTree = "<group>";
+		};
+		969E8F952780D05100EFD90F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				969E8F962780D05100EFD90F /* Core */,
+				969E8FAF2780D05100EFD90F /* Input */,
+				969E8FC72780D05100EFD90F /* Basic */,
+				969E90012780D05100EFD90F /* Output */,
+				969E901B2780D05100EFD90F /* CGMetal.h */,
+			);
+			name = Source;
+			path = ../../../framework/Source;
+			sourceTree = "<group>";
+		};
+		969E8F962780D05100EFD90F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				969E8FA02780D05100EFD90F /* CGMetalBlit.h */,
+				969E8FAD2780D05100EFD90F /* CGMetalBlit.m */,
+				969E8F972780D05100EFD90F /* CGMetalBufferProvider.h */,
+				969E8FA62780D05100EFD90F /* CGMetalBufferProvider.m */,
+				969E8F9C2780D05100EFD90F /* CGMetalContext.h */,
+				969E8FA92780D05100EFD90F /* CGMetalContext.m */,
+				969E8FA42780D05100EFD90F /* CGMetalDevice.h */,
+				969E8F982780D05100EFD90F /* CGMetalDevice.m */,
+				969E8FA52780D05100EFD90F /* CGMetalInput.h */,
+				969E8FAB2780D05100EFD90F /* CGMetalOutput.h */,
+				969E8FA12780D05100EFD90F /* CGMetalOutput.m */,
+				969E8FA22780D05100EFD90F /* CGMetalOutputter.h */,
+				969E8FAE2780D05100EFD90F /* CGMetalOutputter.m */,
+				969E8FA32780D05100EFD90F /* CGMetalQueueContext.h */,
+				969E8F992780D05100EFD90F /* CGMetalQueueContext.m */,
+				969E8F9F2780D05100EFD90F /* CGMetalRender.h */,
+				969E8FAC2780D05100EFD90F /* CGMetalRender.m */,
+				969E8F9E2780D05100EFD90F /* CGMetalSourfaceTexture.h */,
+				969E8FA72780D05100EFD90F /* CGMetalSourfaceTexture.m */,
+				969E8FA82780D05100EFD90F /* CGMetalTexture.h */,
+				969E8F9B2780D05100EFD90F /* CGMetalTexture.m */,
+				969E8F9D2780D05100EFD90F /* compute.metal */,
+				969E8FAA2780D05100EFD90F /* MTLMetalCompute.h */,
+				969E8F9A2780D05100EFD90F /* MTLMetalCompute.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		969E8FAF2780D05100EFD90F /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				969E8FB42780D05100EFD90F /* CGMetalCameraInput.h */,
+				969E8FBF2780D05100EFD90F /* CGMetalCameraInput.m */,
+				969E8FC42780D05100EFD90F /* CGMetalImageInput.h */,
+				969E8FBB2780D05100EFD90F /* CGMetalImageInput.m */,
+				969E8FB32780D05100EFD90F /* CGMetalOpenGLInput.h */,
+				969E8FC02780D05100EFD90F /* CGMetalOpenGLInput.m */,
+				969E8FC32780D05100EFD90F /* CGMetalPixelBufferInput.h */,
+				969E8FB82780D05100EFD90F /* CGMetalPixelBufferInput.m */,
+				969E8FB22780D05100EFD90F /* CGMetalPixelBufferInput.metal */,
+				969E8FB92780D05100EFD90F /* CGMetalPlayerInput.h */,
+				969E8FC52780D05100EFD90F /* CGMetalPlayerInput.m */,
+				969E8FBD2780D05100EFD90F /* CGMetalPlayerInputMac.h */,
+				969E8FB02780D05100EFD90F /* CGMetalPlayerInputMac.m */,
+				969E8FB52780D05100EFD90F /* CGMetalRawDataInput.h */,
+				969E8FBE2780D05100EFD90F /* CGMetalRawDataInput.m */,
+				969E8FC12780D05100EFD90F /* CGMetalRawDataInput.metal */,
+				969E8FC22780D05100EFD90F /* CGMetalTextureInput.h */,
+				969E8FB72780D05100EFD90F /* CGMetalTextureInput.m */,
+				969E8FB12780D05100EFD90F /* CGMetalVideoInput.h */,
+				969E8FBC2780D05100EFD90F /* CGMetalVideoInput.m */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		969E8FC72780D05100EFD90F /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				969E8FC82780D05100EFD90F /* CGMetalBasic.h */,
+				969E8FE32780D05100EFD90F /* CGMetalBasic.m */,
+				969E8FE42780D05100EFD90F /* CGMetalBasic.metal */,
+				969E90002780D05100EFD90F /* CGMetalBasicFour.h */,
+				969E8FE02780D05100EFD90F /* CGMetalBasicFour.m */,
+				969E8FE12780D05100EFD90F /* CGMetalBasicThree.h */,
+				969E8FE62780D05100EFD90F /* CGMetalBasicThree.m */,
+				969E8FC92780D05100EFD90F /* CGMetalBasicTwo.h */,
+				969E8FE52780D05100EFD90F /* CGMetalBasicTwo.m */,
+				969E8FE22780D05100EFD90F /* CGMetalHeader.h */,
+				969E8FCA2780D05100EFD90F /* Effect */,
+				969E8FE72780D05100EFD90F /* Transform */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		969E8FCA2780D05100EFD90F /* Effect */ = {
+			isa = PBXGroup;
+			children = (
+				969E92F62783321D00EFD90F /* CGMetalScaleAlpha.h */,
+				969E92F72783321D00EFD90F /* CGMetalScaleAlpha.m */,
+				969E92F52783321D00EFD90F /* CGMetalScaleAlpha.metal */,
+				969E8FDD2780D05100EFD90F /* CGMetalColour.h */,
+				969E8FD32780D05100EFD90F /* CGMetalColour.m */,
+				969E8FD72780D05100EFD90F /* CGMetalColour.metal */,
+				969E8FDA2780D05100EFD90F /* CGMetalFlashWhite.h */,
+				969E8FCF2780D05100EFD90F /* CGMetalFlashWhite.m */,
+				969E8FCC2780D05100EFD90F /* CGMetalFlashWhite.metal */,
+				969E8FD12780D05100EFD90F /* CGMetalGlitch.h */,
+				969E8FDF2780D05100EFD90F /* CGMetalGlitch.m */,
+				969E8FD92780D05100EFD90F /* CGMetalGlitch.metal */,
+				969E8FDB2780D05100EFD90F /* CGMetalGray.h */,
+				969E8FD42780D05100EFD90F /* CGMetalGray.m */,
+				969E8FD82780D05100EFD90F /* CGMetalGray.metal */,
+				969E8FCE2780D05100EFD90F /* CGMetalBlendAlpha.h */,
+				969E8FD62780D05100EFD90F /* CGMetalBlendAlpha.m */,
+				969E8FDC2780D05100EFD90F /* CGMetalBlendAlpha.metal */,
+				969E92DE2783302A00EFD90F /* CGMetalBlendScaleAlpha.h */,
+				969E92DF2783302A00EFD90F /* CGMetalBlendScaleAlpha.m */,
+				969E8FCB2780D05100EFD90F /* CGMetalShake.h */,
+				969E8FD52780D05100EFD90F /* CGMetalShake.m */,
+				969E8FCD2780D05100EFD90F /* CGMetalShake.metal */,
+				969E8FDE2780D05100EFD90F /* CGMetalSoul.h */,
+				969E8FD22780D05100EFD90F /* CGMetalSoul.m */,
+				969E8FD02780D05100EFD90F /* CGMetalSoul.metal */,
+			);
+			path = Effect;
+			sourceTree = "<group>";
+		};
+		969E8FE72780D05100EFD90F /* Transform */ = {
+			isa = PBXGroup;
+			children = (
+				969E8FFC2780D05100EFD90F /* AePaintReSizeFilter.h */,
+				969E8FEC2780D05100EFD90F /* AePaintReSizeFilter.m */,
+				969E8FF22780D05100EFD90F /* CGMetalCrop.h */,
+				969E8FFF2780D05100EFD90F /* CGMetalCrop.m */,
+				969E8FF82780D05100EFD90F /* CGMetalFlipX.h */,
+				969E8FEA2780D05100EFD90F /* CGMetalFlipX.m */,
+				969E8FEF2780D05100EFD90F /* CGMetalFlipX.metal */,
+				969E8FF42780D05100EFD90F /* CGMetalFlipY.h */,
+				969E8FFD2780D05100EFD90F /* CGMetalFlipY.m */,
+				969E8FE82780D05100EFD90F /* CGMetalFlipY.metal */,
+				969E8FEE2780D05100EFD90F /* CGMetalProjection.h */,
+				969E8FFB2780D05100EFD90F /* CGMetalProjection.m */,
+				969E90BB2780E48C00EFD90F /* CGMetalProjection.metal */,
+				969E8FEB2780D05100EFD90F /* CGMetalReSize.h */,
+				969E8FF72780D05100EFD90F /* CGMetalReSize.m */,
+				969E8FE92780D05100EFD90F /* CGMetalRotate.h */,
+				969E8FF52780D05100EFD90F /* CGMetalRotate.m */,
+				969E8FED2780D05100EFD90F /* CGMetalRotate.metal */,
+				969E8FF92780D05100EFD90F /* CGMetalTranslation.h */,
+				969E8FF12780D05100EFD90F /* CGMetalTranslation.m */,
+				969E90932780D82F00EFD90F /* CGMetalTranslation.metal */,
+				969E8FF02780D05100EFD90F /* CGMetalZoom.h */,
+				969E8FFA2780D05100EFD90F /* CGMetalZoom.m */,
+				969E8FF62780D05100EFD90F /* CGMetalZoom.metal */,
+				969E90952780DAD800EFD90F /* CGMetalWobble.h */,
+				969E90962780DAD800EFD90F /* CGMetalWobble.m */,
+				969E90982780DAE100EFD90F /* CGMetalWobble.metal */,
+			);
+			path = Transform;
+			sourceTree = "<group>";
+		};
+		969E90012780D05100EFD90F /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				969E90022780D05100EFD90F /* ReadBytes */,
+				969E900B2780D05100EFD90F /* IOSurface */,
+				969E90132780D05100EFD90F /* View */,
+			);
+			path = Output;
+			sourceTree = "<group>";
+		};
+		969E90022780D05100EFD90F /* ReadBytes */ = {
+			isa = PBXGroup;
+			children = (
+				969E90082780D05100EFD90F /* CGMetalImageOutput.h */,
+				969E90042780D05100EFD90F /* CGMetalImageOutput.m */,
+				969E90092780D05100EFD90F /* CGMetalPixelBufferOutput.h */,
+				969E90062780D05100EFD90F /* CGMetalPixelBufferOutput.m */,
+				969E90052780D05100EFD90F /* CGMetalRawDataOutput.h */,
+				969E900A2780D05100EFD90F /* CGMetalRawDataOutput.m */,
+				969E90032780D05100EFD90F /* CGMetalTextureOutput.h */,
+				969E90072780D05100EFD90F /* CGMetalTextureOutput.m */,
+			);
+			path = ReadBytes;
+			sourceTree = "<group>";
+		};
+		969E900B2780D05100EFD90F /* IOSurface */ = {
+			isa = PBXGroup;
+			children = (
+				969E90122780D05100EFD90F /* CGMetalOpenGLOutput.h */,
+				969E900D2780D05100EFD90F /* CGMetalOpenGLOutput.m */,
+				969E900E2780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.h */,
+				969E90112780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.m */,
+				969E90102780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.metal */,
+				969E900C2780D05100EFD90F /* CGMetalVideoOutput.h */,
+				969E900F2780D05100EFD90F /* CGMetalVideoOutput.m */,
+			);
+			path = IOSurface;
+			sourceTree = "<group>";
+		};
+		969E90132780D05100EFD90F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				969E90182780D05100EFD90F /* CGMetalLayerOutput.h */,
+				969E90152780D05100EFD90F /* CGMetalLayerOutput.m */,
+				969E901A2780D05100EFD90F /* CGMetalNSViewOutput.h */,
+				969E90172780D05100EFD90F /* CGMetalNSViewOutput.m */,
+				969E90142780D05100EFD90F /* CGMetalUIViewOutput.h */,
+				969E90192780D05100EFD90F /* CGMetalUIViewOutput.m */,
+				969E90162780D05100EFD90F /* CGMetalView.metal */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		969E90A22780DDB300EFD90F /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				969E90A62780DDB300EFD90F /* CGMetalCameraController.h */,
+				969E90B02780DDB300EFD90F /* CGMetalCameraController.m */,
+				969E90AB2780DDB300EFD90F /* CGMetalEncodeController.h */,
+				969E90A32780DDB300EFD90F /* CGMetalEncodeController.m */,
+				969E90AD2780DDB300EFD90F /* CGMetalListController.h */,
+				969E90A42780DDB300EFD90F /* CGMetalListController.m */,
+				969E90A82780DDB300EFD90F /* CGMetalShowController.h */,
+				969E90AE2780DDB300EFD90F /* CGMetalShowController.m */,
+				969E90A72780DDB300EFD90F /* CGMetalSourceController.h */,
+				969E90AF2780DDB300EFD90F /* CGMetalSourceController.m */,
+				969E90B12780DDB300EFD90F /* CGMetalSourceProvider.h */,
+				969E90AA2780DDB300EFD90F /* CGMetalSourceProvider.m */,
+				969E90A92780DDB300EFD90F /* CGMetalVideoController.h */,
+				969E90B22780DDB300EFD90F /* CGMetalVideoController.m */,
+				969E90AC2780DDB300EFD90F /* CGPreviewController.h */,
+				969E90A52780DDB300EFD90F /* CGPreviewController.m */,
+			);
+			name = Example;
+			path = ../../CGMetaliOS/CGMetaliOS/Example;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		969E8E572780CD9E00EFD90F /* CGMetal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 969E8E712780CD9F00EFD90F /* Build configuration list for PBXNativeTarget "CGMetal" */;
+			buildPhases = (
+				969E8E542780CD9E00EFD90F /* Sources */,
+				969E8E552780CD9E00EFD90F /* Frameworks */,
+				969E8E562780CD9E00EFD90F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CGMetal;
+			productName = CGMetal;
+			productReference = 969E8E582780CD9E00EFD90F /* CGMetal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		969E8E502780CD9D00EFD90F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					969E8E572780CD9E00EFD90F = {
+						CreatedOnToolsVersion = 13.2;
+					};
+				};
+			};
+			buildConfigurationList = 969E8E532780CD9D00EFD90F /* Build configuration list for PBXProject "CGMetal" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 969E8E4F2780CD9D00EFD90F;
+			productRefGroup = 969E8E592780CD9E00EFD90F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				969E8E572780CD9E00EFD90F /* CGMetal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		969E8E562780CD9E00EFD90F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969E8F872780D04200EFD90F /* I420_1120x1120.yuv in Resources */,
+				969E8F882780D04200EFD90F /* rgba8_1125x1125.rgba in Resources */,
+				969E8F8B2780D04200EFD90F /* nv12_1120x1120.yuv in Resources */,
+				969E8F8C2780D04200EFD90F /* nv12_1120x1120_bgra.yuv in Resources */,
+				966D8DD6278F2AA600F2B092 /* leftScaleAlpha.mp4 in Resources */,
+				969E8F892780D04200EFD90F /* bgra8_1125x1125.bgra in Resources */,
+				969E8E6B2780CD9F00EFD90F /* LaunchScreen.storyboard in Resources */,
+				969E8F8A2780D04200EFD90F /* nv21_1120x1120.yuv in Resources */,
+				969E8E682780CD9F00EFD90F /* Assets.xcassets in Resources */,
+				969E8E662780CD9E00EFD90F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		969E8E542780CD9E00EFD90F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969E901F2780D05100EFD90F /* CGMetalTexture.m in Sources */,
+				969E90352780D05100EFD90F /* CGMetalFlashWhite.m in Sources */,
+				969E90512780D05100EFD90F /* CGMetalFlipY.m in Sources */,
+				969E90402780D05100EFD90F /* CGMetalGlitch.m in Sources */,
+				969E90B72780DDB300EFD90F /* CGMetalShowController.m in Sources */,
+				969E90302780D05100EFD90F /* CGMetalOpenGLInput.m in Sources */,
+				969E90462780D05100EFD90F /* CGMetalFlipY.metal in Sources */,
+				969E904E2780D05100EFD90F /* CGMetalReSize.m in Sources */,
+				969E90B82780DDB300EFD90F /* CGMetalSourceController.m in Sources */,
+				969E90552780D05100EFD90F /* CGMetalPixelBufferOutput.m in Sources */,
+				969E90492780D05100EFD90F /* CGMetalRotate.metal in Sources */,
+				969E90212780D05100EFD90F /* CGMetalOutput.m in Sources */,
+				969E90502780D05100EFD90F /* CGMetalProjection.m in Sources */,
+				969E904D2780D05100EFD90F /* CGMetalZoom.metal in Sources */,
+				969E90322780D05100EFD90F /* CGMetalPlayerInput.m in Sources */,
+				969E902C2780D05100EFD90F /* CGMetalImageInput.m in Sources */,
+				969E903E2780D05100EFD90F /* CGMetalGlitch.metal in Sources */,
+				969E905A2780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.metal in Sources */,
+				969E90332780D05100EFD90F /* CGMetalFlashWhite.metal in Sources */,
+				969E90B42780DDB300EFD90F /* CGMetalListController.m in Sources */,
+				969E90562780D05100EFD90F /* CGMetalTextureOutput.m in Sources */,
+				969E90542780D05100EFD90F /* CGMetalImageOutput.m in Sources */,
+				969E90B62780DDB300EFD90F /* CGMetalSourceProvider.m in Sources */,
+				969E90B52780DDB300EFD90F /* CGPreviewController.m in Sources */,
+				969E904B2780D05100EFD90F /* CGMetalTranslation.m in Sources */,
+				969E904C2780D05100EFD90F /* CGMetalRotate.m in Sources */,
+				969E90342780D05100EFD90F /* CGMetalShake.metal in Sources */,
+				969E90532780D05100EFD90F /* CGMetalCrop.m in Sources */,
+				969E90412780D05100EFD90F /* CGMetalBasicFour.m in Sources */,
+				969E90392780D05100EFD90F /* CGMetalGray.m in Sources */,
+				969E90592780D05100EFD90F /* CGMetalVideoOutput.m in Sources */,
+				969E92F92783321D00EFD90F /* CGMetalScaleAlpha.m in Sources */,
+				969E903F2780D05100EFD90F /* CGMetalBlendAlpha.metal in Sources */,
+				969E90232780D05100EFD90F /* CGMetalSourfaceTexture.m in Sources */,
+				969E90242780D05100EFD90F /* CGMetalContext.m in Sources */,
+				969E90262780D05100EFD90F /* CGMetalBlit.m in Sources */,
+				969E8E632780CD9E00EFD90F /* ViewController.m in Sources */,
+				969E901C2780D05100EFD90F /* CGMetalDevice.m in Sources */,
+				969E90472780D05100EFD90F /* CGMetalFlipX.m in Sources */,
+				969E90222780D05100EFD90F /* CGMetalBufferProvider.m in Sources */,
+				969E90482780D05100EFD90F /* AePaintReSizeFilter.m in Sources */,
+				969E90282780D05100EFD90F /* CGMetalPlayerInputMac.m in Sources */,
+				969E905D2780D05100EFD90F /* CGMetalView.metal in Sources */,
+				969E90272780D05100EFD90F /* CGMetalOutputter.m in Sources */,
+				969E92E02783302A00EFD90F /* CGMetalBlendScaleAlpha.m in Sources */,
+				969E901E2780D05100EFD90F /* MTLMetalCompute.m in Sources */,
+				969E8E5D2780CD9E00EFD90F /* AppDelegate.m in Sources */,
+				969E90582780D05100EFD90F /* CGMetalOpenGLOutput.m in Sources */,
+				969E90442780D05100EFD90F /* CGMetalBasicTwo.m in Sources */,
+				969E90312780D05100EFD90F /* CGMetalRawDataInput.metal in Sources */,
+				969E90432780D05100EFD90F /* CGMetalBasic.metal in Sources */,
+				969E90202780D05100EFD90F /* compute.metal in Sources */,
+				969E90292780D05100EFD90F /* CGMetalPixelBufferInput.metal in Sources */,
+				969E90422780D05100EFD90F /* CGMetalBasic.m in Sources */,
+				969E903A2780D05100EFD90F /* CGMetalShake.m in Sources */,
+				969E903C2780D05100EFD90F /* CGMetalColour.metal in Sources */,
+				969E90382780D05100EFD90F /* CGMetalColour.m in Sources */,
+				969E90BA2780DDB300EFD90F /* CGMetalVideoController.m in Sources */,
+				969E905E2780D05100EFD90F /* CGMetalNSViewOutput.m in Sources */,
+				969E90942780D83000EFD90F /* CGMetalTranslation.metal in Sources */,
+				969E902F2780D05100EFD90F /* CGMetalCameraInput.m in Sources */,
+				969E90252780D05100EFD90F /* CGMetalRender.m in Sources */,
+				969E903D2780D05100EFD90F /* CGMetalGray.metal in Sources */,
+				969E92F82783321D00EFD90F /* CGMetalScaleAlpha.metal in Sources */,
+				969E905F2780D05100EFD90F /* CGMetalUIViewOutput.m in Sources */,
+				969E902D2780D05100EFD90F /* CGMetalVideoInput.m in Sources */,
+				969E90362780D05100EFD90F /* CGMetalSoul.metal in Sources */,
+				969E8E6E2780CD9F00EFD90F /* main.m in Sources */,
+				969E90992780DAE100EFD90F /* CGMetalWobble.metal in Sources */,
+				969E90972780DAD800EFD90F /* CGMetalWobble.m in Sources */,
+				969E90372780D05100EFD90F /* CGMetalSoul.m in Sources */,
+				969E90602780D14B00EFD90F /* CGMetal.h in Sources */,
+				969E902A2780D05100EFD90F /* CGMetalTextureInput.m in Sources */,
+				969E90BC2780E48C00EFD90F /* CGMetalProjection.metal in Sources */,
+				969E90B92780DDB300EFD90F /* CGMetalCameraController.m in Sources */,
+				969E902B2780D05100EFD90F /* CGMetalPixelBufferInput.m in Sources */,
+				969E905C2780D05100EFD90F /* CGMetalLayerOutput.m in Sources */,
+				969E90452780D05100EFD90F /* CGMetalBasicThree.m in Sources */,
+				969E902E2780D05100EFD90F /* CGMetalRawDataInput.m in Sources */,
+				969E901D2780D05100EFD90F /* CGMetalQueueContext.m in Sources */,
+				969E90572780D05100EFD90F /* CGMetalRawDataOutput.m in Sources */,
+				969E904A2780D05100EFD90F /* CGMetalFlipX.metal in Sources */,
+				969E905B2780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.m in Sources */,
+				969E903B2780D05100EFD90F /* CGMetalBlendAlpha.m in Sources */,
+				969E904F2780D05100EFD90F /* CGMetalZoom.m in Sources */,
+				969E90B32780DDB300EFD90F /* CGMetalEncodeController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		969E8E642780CD9E00EFD90F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				969E8E652780CD9E00EFD90F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		969E8E692780CD9F00EFD90F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				969E8E6A2780CD9F00EFD90F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		969E8E6F2780CD9F00EFD90F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		969E8E702780CD9F00EFD90F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		969E8E722780CD9F00EFD90F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9ZSR9Q37TC;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					SOURCE_COMPILE,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CGMetal/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhenqu.MediaEngineDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		969E8E732780CD9F00EFD90F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9ZSR9Q37TC;
+				GCC_PREPROCESSOR_DEFINITIONS = SOURCE_COMPILE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CGMetal/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhenqu.MediaEngineDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		969E8E532780CD9D00EFD90F /* Build configuration list for PBXProject "CGMetal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				969E8E6F2780CD9F00EFD90F /* Debug */,
+				969E8E702780CD9F00EFD90F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		969E8E712780CD9F00EFD90F /* Build configuration list for PBXNativeTarget "CGMetal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				969E8E722780CD9F00EFD90F /* Debug */,
+				969E8E732780CD9F00EFD90F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 969E8E502780CD9D00EFD90F /* Project object */;
+}
