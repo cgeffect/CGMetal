@@ -417,12 +417,12 @@
 		969E8C15277599FE00EFD90F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				969E8C16277599FE00EFD90F /* CGMetalUIViewOutput.h */,
-				969E8C17277599FE00EFD90F /* CGMetalLayerOutput.m */,
-				969E8C19277599FE00EFD90F /* CGMetalNSViewOutput.m */,
 				969E8C1A277599FE00EFD90F /* CGMetalLayerOutput.h */,
-				969E8C1B277599FE00EFD90F /* CGMetalUIViewOutput.m */,
+				969E8C17277599FE00EFD90F /* CGMetalLayerOutput.m */,
 				969E8C1C277599FE00EFD90F /* CGMetalNSViewOutput.h */,
+				969E8C19277599FE00EFD90F /* CGMetalNSViewOutput.m */,
+				969E8C16277599FE00EFD90F /* CGMetalUIViewOutput.h */,
+				969E8C1B277599FE00EFD90F /* CGMetalUIViewOutput.m */,
 				969E8C07277599FE00EFD90F /* CGMetalView.metal */,
 			);
 			path = View;

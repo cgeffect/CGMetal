@@ -33,6 +33,7 @@
         MTLRenderPipelineDescriptor *pipelineDescriptor = [MTLRenderPipelineDescriptor new];
         pipelineDescriptor.label = @"Offscreen Render Pipeline";
         pipelineDescriptor.rasterSampleCount = 1;
+        pipelineDescriptor.sampleCount = 1;
         pipelineDescriptor.vertexFunction = vertexFunc;
         pipelineDescriptor.fragmentFunction = fragmentFunc;
 //        MTLVertexDescriptor *vertexDescriptor = [MTLVertexDescriptor vertexDescriptor];
@@ -65,6 +66,7 @@
 
 #pragma mark -
 #pragma mark setter
+//渲染结果输出的纹理, 把结果纹理绑定到renderpass的colorAttachments上, 在绘制完成后, 数据会被输出到colorAttachments绑定的纹理, 类似fbo的color绑定
 - (void)setOutTexture:(id<MTLTexture>)texture index:(NSUInteger)index {
     _renderPassDescriptor.colorAttachments[index].texture = texture;
 //    _renderPassDescriptor.renderTargetWidth = texture.width;

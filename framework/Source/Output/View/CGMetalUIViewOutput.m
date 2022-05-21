@@ -156,7 +156,10 @@
     [commandBuffer addScheduledHandler:^(id<MTLCommandBuffer> _Nonnull buffer) {
 //        NSLog(@"command buffer has been scheduled for execution");
     }];
+    //这个方法告诉Metal，当命令缓冲区被调度执行时，Metal 应该与 Core Animation 协调以在渲染完成后显示纹理。
+    //当 Core Animation 呈现纹理时，它成为视图的新内容。
     [commandBuffer presentDrawable: currentDrawable];
+    //提交命令缓冲区
     [commandBuffer commit];
     
     if (_isWaitUntilScheduled) {
