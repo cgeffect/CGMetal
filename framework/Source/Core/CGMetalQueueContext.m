@@ -18,9 +18,9 @@
         pthread_t pid = pthread_self();
         pthread_getschedparam(pid, &policy, &param);
         
-        int minPriority = sched_get_priority_min(policy);
-        int maxPriority = sched_get_priority_max(policy);
-        int oriPriority = param.sched_priority;
+//        int minPriority = sched_get_priority_min(policy);
+//        int maxPriority = sched_get_priority_max(policy);
+//        int oriPriority = param.sched_priority;
 
     }
     return self;
