@@ -5,8 +5,6 @@ CGMetal 是一个适用于 iOS 的GPU加速Metal处理库<br>
 
 SDK 的 Github 地址：https://github.com/cgeffect/CGMetal
 
-感谢 GPUImage https://github.com/BradLarson/GPUImage
-
 ![image](https://user-images.githubusercontent.com/15692322/124692294-eb4b0d80-df0f-11eb-9f2a-41e5641af4a4.png)
 
 ![image](https://user-images.githubusercontent.com/15692322/139858060-c016cecb-4cf7-43bd-ad32-b802910fbd45.gif)
@@ -75,3 +73,9 @@ continue...
 ### 注意
 模拟器不支持fast texture upload, 使用真机运行
 iOS10以上, Xcode 13及其以上
+
+### 官方文档
+[Using Metal to Draw a View’s Contents](https://developer.apple.com/documentation/metal/using_metal_to_draw_a_view_s_contents)<br/>
+[Processing a Texture in a Compute Function](https://developer.apple.com/documentation/metal/compute_passes/processing_a_texture_in_a_compute_function)<br/>
+[Synchronizing CPU and GPU Work](https://developer.apple.com/documentation/metal/resource_synchronization/synchronizing_cpu_and_gpu_work)<br/>
+[Performing Calculations on a GPU](https://developer.apple.com/documentation/metal/performing_calculations_on_a_gpu)
