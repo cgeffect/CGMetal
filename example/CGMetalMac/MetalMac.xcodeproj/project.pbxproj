@@ -71,7 +71,6 @@
 		9650747C275C73D100E8A26B /* CGMetalCustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGMetalCustomView.h; sourceTree = "<group>"; };
 		9650747D275C73D100E8A26B /* CGMetalCustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGMetalCustomView.m; sourceTree = "<group>"; };
 		9667C94D283B3F9400B2B4AA /* CGMetalMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CGMetalMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		969E8A5B27758F0900EFD90F /* CGMetalMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CGMetalMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		969E8D7027770DF800EFD90F /* rgba8_1125x1125.rgba */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = rgba8_1125x1125.rgba; path = ../../CGMetaliOS/CGMetaliOS/Resources/rgba8_1125x1125.rgba; sourceTree = "<group>"; };
 		96E233D02758691C00CB1336 /* MetalMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E233D32758691C00CB1336 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				9667C94D283B3F9400B2B4AA /* CGMetalMac.framework */,
-				969E8A5B27758F0900EFD90F /* CGMetalMacOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

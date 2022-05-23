@@ -9,7 +9,7 @@
 #ifdef SOURCE_COMPILE
 #import "CGMetal.h"
 #else
-#import <CGMetalOS/CGMetalOS.h>
+#import <CGMetal/CGMetal.h>
 #endif
 
 @interface CGMetalEncodeController ()<CGMetalVideoReadDelegate>

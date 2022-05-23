@@ -5,7 +5,7 @@
       location = "group:../framework/CGMetalMac/CGMetalMac.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../framework/CGMetalOS/CGMetalOS.xcodeproj">
+      location = "group:/Users/jason/Jason/project/CGMetal/framework/CGMetalOS/CGMetal.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:/Users/jason/Jason/project/CGMetal/example/CGMetaliOS/MetaliOS.xcodeproj">

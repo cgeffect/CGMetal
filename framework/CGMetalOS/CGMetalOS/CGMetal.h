@@ -61,4 +61,3 @@ FOUNDATION_EXPORT const unsigned char CGMetalVersionString[];
 #else
 #import "CGMetalNSViewOutput.h"
 #endif
-
