@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "96E233CF2758691C00CB1336"
-               BuildableName = "CGMetalMac.app"
-               BlueprintName = "CGMetalMac"
-               ReferencedContainer = "container:CGMetalMac.xcodeproj">
+               BlueprintIdentifier = "E5E9813F2658D10F008ED21D"
+               BuildableName = "MetaliOS.app"
+               BlueprintName = "MetaliOS"
+               ReferencedContainer = "container:MetaliOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "96E233CF2758691C00CB1336"
-            BuildableName = "CGMetalMac.app"
-            BlueprintName = "CGMetalMac"
-            ReferencedContainer = "container:CGMetalMac.xcodeproj">
+            BlueprintIdentifier = "E5E9813F2658D10F008ED21D"
+            BuildableName = "MetaliOS.app"
+            BlueprintName = "MetaliOS"
+            ReferencedContainer = "container:MetaliOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "96E233CF2758691C00CB1336"
-            BuildableName = "CGMetalMac.app"
-            BlueprintName = "CGMetalMac"
-            ReferencedContainer = "container:CGMetalMac.xcodeproj">
+            BlueprintIdentifier = "E5E9813F2658D10F008ED21D"
+            BuildableName = "MetaliOS.app"
+            BlueprintName = "MetaliOS"
+            ReferencedContainer = "container:MetaliOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -75,6 +75,7 @@ continue...
 iOS10以上, Xcode 13及其以上
 
 ### 官方文档
+[Metal](https://developer.apple.com/documentation/metal)
 [Using Metal to Draw a View’s Contents](https://developer.apple.com/documentation/metal/using_metal_to_draw_a_view_s_contents)<br/>
 [Processing a Texture in a Compute Function](https://developer.apple.com/documentation/metal/compute_passes/processing_a_texture_in_a_compute_function)<br/>
 [Synchronizing CPU and GPU Work](https://developer.apple.com/documentation/metal/resource_synchronization/synchronizing_cpu_and_gpu_work)<br/>

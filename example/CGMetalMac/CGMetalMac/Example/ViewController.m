@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 #import "CGMetalCustomView.h"
-#import <CGMetalMacOS/CGMetalMacOS.h>
+#import <CGMetalMac/CGMetalMac.h>
 
 @interface ViewController ()<NSTableViewDelegate, NSTableViewDataSource>
 {

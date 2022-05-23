@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9667C911283A66D500B2B4AA /* CGMetalCompute.m in Sources */ = {isa = PBXBuildFile; fileRef = 9667C910283A66D500B2B4AA /* CGMetalCompute.m */; };
 		966D8DD6278F2AA600F2B092 /* leftScaleAlpha.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 966D8DD5278F2AA600F2B092 /* leftScaleAlpha.mp4 */; };
 		969E8E5D2780CD9E00EFD90F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8E5C2780CD9E00EFD90F /* AppDelegate.m */; };
 		969E8E632780CD9E00EFD90F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8E622780CD9E00EFD90F /* ViewController.m */; };
@@ -104,8 +105,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9667C90F283A66D500B2B4AA /* CGMetalCompute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGMetalCompute.h; sourceTree = "<group>"; };
+		9667C910283A66D500B2B4AA /* CGMetalCompute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGMetalCompute.m; sourceTree = "<group>"; };
+		9667C954283B440900B2B4AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966D8DD5278F2AA600F2B092 /* leftScaleAlpha.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = leftScaleAlpha.mp4; sourceTree = "<group>"; };
-		969E8E582780CD9E00EFD90F /* CGMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		969E8E582780CD9E00EFD90F /* Metal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		969E8E5B2780CD9E00EFD90F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		969E8E5C2780CD9E00EFD90F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		969E8E612780CD9E00EFD90F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -113,7 +117,6 @@
 		969E8E652780CD9E00EFD90F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		969E8E672780CD9F00EFD90F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		969E8E6A2780CD9F00EFD90F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		969E8E6C2780CD9F00EFD90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		969E8E6D2780CD9F00EFD90F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		969E8F6E2780D04200EFD90F /* I420_1120x1120.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = I420_1120x1120.yuv; sourceTree = "<group>"; };
 		969E8F6F2780D04200EFD90F /* rgba8_1125x1125.rgba */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rgba8_1125x1125.rgba; sourceTree = "<group>"; };
@@ -287,7 +290,7 @@
 		969E8E592780CD9E00EFD90F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				969E8E582780CD9E00EFD90F /* CGMetal.app */,
+				969E8E582780CD9E00EFD90F /* Metal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 		969E8E5A2780CD9E00EFD90F /* CGMetal */ = {
 			isa = PBXGroup;
 			children = (
+				9667C954283B440900B2B4AA /* Info.plist */,
 				969E90A22780DDB300EFD90F /* Example */,
 				969E8F952780D05100EFD90F /* Source */,
 				969E8F6B2780D04200EFD90F /* Resources */,
@@ -305,7 +309,6 @@
 				969E8E642780CD9E00EFD90F /* Main.storyboard */,
 				969E8E672780CD9F00EFD90F /* Assets.xcassets */,
 				969E8E692780CD9F00EFD90F /* LaunchScreen.storyboard */,
-				969E8E6C2780CD9F00EFD90F /* Info.plist */,
 				969E8E6D2780CD9F00EFD90F /* main.m */,
 			);
 			path = CGMetal;
@@ -393,6 +396,8 @@
 				969E8FB72780D05100EFD90F /* CGMetalTextureInput.m */,
 				969E8FB12780D05100EFD90F /* CGMetalVideoInput.h */,
 				969E8FBC2780D05100EFD90F /* CGMetalVideoInput.m */,
+				9667C90F283A66D500B2B4AA /* CGMetalCompute.h */,
+				9667C910283A66D500B2B4AA /* CGMetalCompute.m */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -559,9 +564,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		969E8E572780CD9E00EFD90F /* CGMetal */ = {
+		969E8E572780CD9E00EFD90F /* Metal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 969E8E712780CD9F00EFD90F /* Build configuration list for PBXNativeTarget "CGMetal" */;
+			buildConfigurationList = 969E8E712780CD9F00EFD90F /* Build configuration list for PBXNativeTarget "Metal" */;
 			buildPhases = (
 				969E8E542780CD9E00EFD90F /* Sources */,
 				969E8E552780CD9E00EFD90F /* Frameworks */,
@@ -571,9 +576,9 @@
 			);
 			dependencies = (
 			);
-			name = CGMetal;
+			name = Metal;
 			productName = CGMetal;
-			productReference = 969E8E582780CD9E00EFD90F /* CGMetal.app */;
+			productReference = 969E8E582780CD9E00EFD90F /* Metal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -590,7 +595,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 969E8E532780CD9D00EFD90F /* Build configuration list for PBXProject "CGMetal" */;
+			buildConfigurationList = 969E8E532780CD9D00EFD90F /* Build configuration list for PBXProject "Metal" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -603,7 +608,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				969E8E572780CD9E00EFD90F /* CGMetal */,
+				969E8E572780CD9E00EFD90F /* Metal */,
 			);
 		};
 /* End PBXProject section */
@@ -649,6 +654,7 @@
 				969E904D2780D05100EFD90F /* CGMetalZoom.metal in Sources */,
 				969E90322780D05100EFD90F /* CGMetalPlayerInput.m in Sources */,
 				969E902C2780D05100EFD90F /* CGMetalImageInput.m in Sources */,
+				9667C911283A66D500B2B4AA /* CGMetalCompute.m in Sources */,
 				969E903E2780D05100EFD90F /* CGMetalGlitch.metal in Sources */,
 				969E905A2780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.metal in Sources */,
 				969E90332780D05100EFD90F /* CGMetalFlashWhite.metal in Sources */,
@@ -919,7 +925,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		969E8E532780CD9D00EFD90F /* Build configuration list for PBXProject "CGMetal" */ = {
+		969E8E532780CD9D00EFD90F /* Build configuration list for PBXProject "Metal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				969E8E6F2780CD9F00EFD90F /* Debug */,
@@ -928,7 +934,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		969E8E712780CD9F00EFD90F /* Build configuration list for PBXNativeTarget "CGMetal" */ = {
+		969E8E712780CD9F00EFD90F /* Build configuration list for PBXNativeTarget "Metal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				969E8E722780CD9F00EFD90F /* Debug */,

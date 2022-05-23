@@ -18,8 +18,8 @@
 		96507408275C6FA400E8A26B /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 965073FE275C6FA400E8A26B /* MASViewConstraint.m */; };
 		96507409275C6FA400E8A26B /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 965073FF275C6FA400E8A26B /* MASViewAttribute.m */; };
 		9650747E275C73D100E8A26B /* CGMetalCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9650747D275C73D100E8A26B /* CGMetalCustomView.m */; };
-		967C599F278AE14300B2FA83 /* CGMetalMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969E8A5B27758F0900EFD90F /* CGMetalMacOS.framework */; };
-		967C59A0278AE14300B2FA83 /* CGMetalMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 969E8A5B27758F0900EFD90F /* CGMetalMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9667C94E283B3F9400B2B4AA /* CGMetalMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9667C94D283B3F9400B2B4AA /* CGMetalMac.framework */; };
+		9667C94F283B3F9400B2B4AA /* CGMetalMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9667C94D283B3F9400B2B4AA /* CGMetalMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		969E8D7127770DF800EFD90F /* rgba8_1125x1125.rgba in Resources */ = {isa = PBXBuildFile; fileRef = 969E8D7027770DF800EFD90F /* rgba8_1125x1125.rgba */; };
 		96E233D52758691C00CB1336 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E233D42758691C00CB1336 /* AppDelegate.m */; };
 		96E233D82758691C00CB1336 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E233D72758691C00CB1336 /* ViewController.m */; };
@@ -29,13 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		967C59A1278AE14300B2FA83 /* Embed Frameworks */ = {
+		9667C950283B3F9400B2B4AA /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				967C59A0278AE14300B2FA83 /* CGMetalMacOS.framework in Embed Frameworks */,
+				9667C94F283B3F9400B2B4AA /* CGMetalMac.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,9 +70,10 @@
 		965073FF275C6FA400E8A26B /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		9650747C275C73D100E8A26B /* CGMetalCustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGMetalCustomView.h; sourceTree = "<group>"; };
 		9650747D275C73D100E8A26B /* CGMetalCustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGMetalCustomView.m; sourceTree = "<group>"; };
+		9667C94D283B3F9400B2B4AA /* CGMetalMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CGMetalMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		969E8A5B27758F0900EFD90F /* CGMetalMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CGMetalMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		969E8D7027770DF800EFD90F /* rgba8_1125x1125.rgba */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = rgba8_1125x1125.rgba; path = ../../CGMetaliOS/CGMetaliOS/Resources/rgba8_1125x1125.rgba; sourceTree = "<group>"; };
-		96E233D02758691C00CB1336 /* CGMetalMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGMetalMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E233D02758691C00CB1336 /* MetalMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E233D32758691C00CB1336 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96E233D42758691C00CB1336 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		96E233D62758691C00CB1336 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -88,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				967C599F278AE14300B2FA83 /* CGMetalMacOS.framework in Frameworks */,
+				9667C94E283B3F9400B2B4AA /* CGMetalMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +131,7 @@
 		969E8A5A27758F0900EFD90F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9667C94D283B3F9400B2B4AA /* CGMetalMac.framework */,
 				969E8A5B27758F0900EFD90F /* CGMetalMacOS.framework */,
 			);
 			name = Frameworks;
@@ -147,7 +149,7 @@
 		96E233D12758691C00CB1336 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96E233D02758691C00CB1336 /* CGMetalMac.app */,
+				96E233D02758691C00CB1336 /* MetalMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,22 +184,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		96E233CF2758691C00CB1336 /* CGMetalMac */ = {
+		96E233CF2758691C00CB1336 /* MetalMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96E233E32758691E00CB1336 /* Build configuration list for PBXNativeTarget "CGMetalMac" */;
+			buildConfigurationList = 96E233E32758691E00CB1336 /* Build configuration list for PBXNativeTarget "MetalMac" */;
 			buildPhases = (
 				96E233CC2758691C00CB1336 /* Sources */,
 				96E233CD2758691C00CB1336 /* Frameworks */,
 				96E233CE2758691C00CB1336 /* Resources */,
-				967C59A1278AE14300B2FA83 /* Embed Frameworks */,
+				9667C950283B3F9400B2B4AA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CGMetalMac;
+			name = MetalMac;
 			productName = CGMetalMac;
-			productReference = 96E233D02758691C00CB1336 /* CGMetalMac.app */;
+			productReference = 96E233D02758691C00CB1336 /* MetalMac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +218,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 96E233CB2758691C00CB1336 /* Build configuration list for PBXProject "CGMetalMac" */;
+			buildConfigurationList = 96E233CB2758691C00CB1336 /* Build configuration list for PBXProject "MetalMac" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,7 +231,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				96E233CF2758691C00CB1336 /* CGMetalMac */,
+				96E233CF2758691C00CB1336 /* MetalMac */,
 			);
 		};
 /* End PBXProject section */
@@ -455,7 +457,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		96E233CB2758691C00CB1336 /* Build configuration list for PBXProject "CGMetalMac" */ = {
+		96E233CB2758691C00CB1336 /* Build configuration list for PBXProject "MetalMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96E233E12758691E00CB1336 /* Debug */,
@@ -464,7 +466,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96E233E32758691E00CB1336 /* Build configuration list for PBXNativeTarget "CGMetalMac" */ = {
+		96E233E32758691E00CB1336 /* Build configuration list for PBXNativeTarget "MetalMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96E233E42758691E00CB1336 /* Debug */,
