@@ -10,13 +10,13 @@ SDK 的 Github 地址：https://github.com/cgeffect/CGMetal
 ![image](https://user-images.githubusercontent.com/15692322/139858060-c016cecb-4cf7-43bd-ad32-b802910fbd45.gif)
 
 ### 工程结构
-![image](https://user-images.githubusercontent.com/15692322/154798571-4e7ba955-2e25-4609-8f92-45c64c0ebd9b.png)
+![screenshot-20220523-125915](https://user-images.githubusercontent.com/15692322/169746784-b76eb8c1-4ca0-424a-976b-790ed5cf9df3.png)
 
-CGMetal: 集成源码的iOS工程<br/>
 CGMetalOS: iOS动态framework<br/>
 CGMetalMacOS: Mac动态framework<br/>
-CGMetaliOS: 集成CGMetalOS动态framework的iOS工程<br/>
-CGMetalMac: 集成CGMetalMacOS动态framework的Mac工程<br/>
+MetaliOS: 集成CGMetalOS动态framework的iOS工程<br/>
+MetalMac: 集成CGMetalMacOS动态framework的Mac工程<br/>
+MetalSrc: 集成源码的iOS工程<br/>
 
 ### 输入源
 1. CGMetalImageInput(图片)
