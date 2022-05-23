@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9667C911283A66D500B2B4AA /* CGMetalCompute.m in Sources */ = {isa = PBXBuildFile; fileRef = 9667C910283A66D500B2B4AA /* CGMetalCompute.m */; };
 		966D8DD6278F2AA600F2B092 /* leftScaleAlpha.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 966D8DD5278F2AA600F2B092 /* leftScaleAlpha.mp4 */; };
 		969E8E5D2780CD9E00EFD90F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8E5C2780CD9E00EFD90F /* AppDelegate.m */; };
 		969E8E632780CD9E00EFD90F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8E622780CD9E00EFD90F /* ViewController.m */; };
@@ -104,6 +105,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9667C90F283A66D500B2B4AA /* CGMetalCompute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGMetalCompute.h; sourceTree = "<group>"; };
+		9667C910283A66D500B2B4AA /* CGMetalCompute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGMetalCompute.m; sourceTree = "<group>"; };
 		966D8DD5278F2AA600F2B092 /* leftScaleAlpha.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = leftScaleAlpha.mp4; sourceTree = "<group>"; };
 		969E8E582780CD9E00EFD90F /* CGMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		969E8E5B2780CD9E00EFD90F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -393,6 +396,8 @@
 				969E8FB72780D05100EFD90F /* CGMetalTextureInput.m */,
 				969E8FB12780D05100EFD90F /* CGMetalVideoInput.h */,
 				969E8FBC2780D05100EFD90F /* CGMetalVideoInput.m */,
+				9667C90F283A66D500B2B4AA /* CGMetalCompute.h */,
+				9667C910283A66D500B2B4AA /* CGMetalCompute.m */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -649,6 +654,7 @@
 				969E904D2780D05100EFD90F /* CGMetalZoom.metal in Sources */,
 				969E90322780D05100EFD90F /* CGMetalPlayerInput.m in Sources */,
 				969E902C2780D05100EFD90F /* CGMetalImageInput.m in Sources */,
+				9667C911283A66D500B2B4AA /* CGMetalCompute.m in Sources */,
 				969E903E2780D05100EFD90F /* CGMetalGlitch.metal in Sources */,
 				969E905A2780D05100EFD90F /* CGMetalPixelBufferSurfaceOutput.metal in Sources */,
 				969E90332780D05100EFD90F /* CGMetalFlashWhite.metal in Sources */,
