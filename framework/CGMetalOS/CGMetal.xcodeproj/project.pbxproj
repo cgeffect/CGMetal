@@ -275,7 +275,7 @@
 		9654C534277562860024386E = {
 			isa = PBXGroup;
 			children = (
-				9654C540277562860024386E /* CGMetalOS */,
+				9654C540277562860024386E /* CGMetal */,
 				9654C53F277562860024386E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -288,14 +288,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9654C540277562860024386E /* CGMetalOS */ = {
+		9654C540277562860024386E /* CGMetal */ = {
 			isa = PBXGroup;
 			children = (
 				969E8A63277599EF00EFD90F /* Source */,
 				969E8CF82775DD4600EFD90F /* CGMetal.h */,
 				969E8CF72775DD4600EFD90F /* CGMetal.docc */,
 			);
-			path = CGMetalOS;
+			path = CGMetal;
 			sourceTree = "<group>";
 		};
 		969E8A63277599EF00EFD90F /* Source */ = {
