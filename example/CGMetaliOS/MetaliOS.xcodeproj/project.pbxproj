@@ -59,7 +59,7 @@
 		96E9B5A727756E2200097ABE /* nv21_1120x1120.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nv21_1120x1120.yuv; sourceTree = "<group>"; };
 		96E9B5A827756E2200097ABE /* nv12_1120x1120.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nv12_1120x1120.yuv; sourceTree = "<group>"; };
 		96E9B5A927756E2200097ABE /* nv12_1120x1120_bgra.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nv12_1120x1120_bgra.yuv; sourceTree = "<group>"; };
-		E5E981402658D10F008ED21D /* CGMetaliOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGMetaliOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E981402658D10F008ED21D /* MetaliOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaliOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E981432658D10F008ED21D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5E981442658D10F008ED21D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E5E9814F2658D110008ED21D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		E5E981412658D10F008ED21D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5E981402658D10F008ED21D /* CGMetaliOS.app */,
+				E5E981402658D10F008ED21D /* MetaliOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E5E9813F2658D10F008ED21D /* CGMetaliOS */ = {
+		E5E9813F2658D10F008ED21D /* MetaliOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5E981592658D110008ED21D /* Build configuration list for PBXNativeTarget "CGMetaliOS" */;
+			buildConfigurationList = E5E981592658D110008ED21D /* Build configuration list for PBXNativeTarget "MetaliOS" */;
 			buildPhases = (
 				E5E9813C2658D10F008ED21D /* Sources */,
 				E5E9813D2658D10F008ED21D /* Frameworks */,
@@ -183,9 +183,9 @@
 			);
 			dependencies = (
 			);
-			name = CGMetaliOS;
+			name = MetaliOS;
 			productName = CGMetal;
-			productReference = E5E981402658D10F008ED21D /* CGMetaliOS.app */;
+			productReference = E5E981402658D10F008ED21D /* MetaliOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +203,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E5E9813B2658D10F008ED21D /* Build configuration list for PBXProject "CGMetaliOS" */;
+			buildConfigurationList = E5E9813B2658D10F008ED21D /* Build configuration list for PBXProject "MetaliOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,7 +216,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E5E9813F2658D10F008ED21D /* CGMetaliOS */,
+				E5E9813F2658D10F008ED21D /* MetaliOS */,
 			);
 		};
 /* End PBXProject section */
@@ -433,7 +433,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E5E9813B2658D10F008ED21D /* Build configuration list for PBXProject "CGMetaliOS" */ = {
+		E5E9813B2658D10F008ED21D /* Build configuration list for PBXProject "MetaliOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5E981572658D110008ED21D /* Debug */,
@@ -442,7 +442,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5E981592658D110008ED21D /* Build configuration list for PBXNativeTarget "CGMetaliOS" */ = {
+		E5E981592658D110008ED21D /* Build configuration list for PBXNativeTarget "MetaliOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5E9815A2658D110008ED21D /* Debug */,

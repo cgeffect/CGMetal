@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E5E9813F2658D10F008ED21D"
-               BuildableName = "CGMetaliOS.app"
-               BlueprintName = "CGMetaliOS"
-               ReferencedContainer = "container:CGMetaliOS.xcodeproj">
+               BlueprintIdentifier = "969E8E572780CD9E00EFD90F"
+               BuildableName = "Metal.app"
+               BlueprintName = "Metal"
+               ReferencedContainer = "container:MetalSrc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E5E9813F2658D10F008ED21D"
-            BuildableName = "CGMetaliOS.app"
-            BlueprintName = "CGMetaliOS"
-            ReferencedContainer = "container:CGMetaliOS.xcodeproj">
+            BlueprintIdentifier = "969E8E572780CD9E00EFD90F"
+            BuildableName = "Metal.app"
+            BlueprintName = "Metal"
+            ReferencedContainer = "container:MetalSrc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E5E9813F2658D10F008ED21D"
-            BuildableName = "CGMetaliOS.app"
-            BlueprintName = "CGMetaliOS"
-            ReferencedContainer = "container:CGMetaliOS.xcodeproj">
+            BlueprintIdentifier = "969E8E572780CD9E00EFD90F"
+            BuildableName = "Metal.app"
+            BlueprintName = "Metal"
+            ReferencedContainer = "container:MetalSrc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

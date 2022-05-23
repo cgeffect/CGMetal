@@ -2,18 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:CGMetal/CGMetal.xcodeproj">
+      location = "group:../framework/CGMetalMac/CGMetalMac.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../framework/CGMetalOS/CGMetalOS.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../framework/CGMetalMacOS/CGMetalMacOS.xcodeproj">
+      location = "group:/Users/jason/Jason/project/CGMetal/example/CGMetaliOS/MetaliOS.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CGMetaliOS/CGMetaliOS.xcodeproj">
+      location = "group:/Users/jason/Jason/project/CGMetal/example/CGMetalMac/MetalMac.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CGMetalMac/CGMetalMac.xcodeproj">
+      location = "group:CGMetal/MetalSrc.xcodeproj">
    </FileRef>
 </Workspace>
