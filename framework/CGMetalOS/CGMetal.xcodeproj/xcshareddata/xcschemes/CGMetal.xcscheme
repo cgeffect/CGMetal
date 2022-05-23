@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9654C53D277562860024386E"
-               BuildableName = "CGMetalOS.framework"
+               BuildableName = "CGMetal.framework"
                BlueprintName = "CGMetal"
                ReferencedContainer = "container:CGMetal.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9654C53D277562860024386E"
-            BuildableName = "CGMetalOS.framework"
+            BuildableName = "CGMetal.framework"
             BlueprintName = "CGMetal"
             ReferencedContainer = "container:CGMetal.xcodeproj">
          </BuildableReference>
