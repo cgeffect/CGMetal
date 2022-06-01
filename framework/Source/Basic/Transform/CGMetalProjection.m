@@ -34,15 +34,15 @@ float* projectionMatrix(float matrix[16], float x, float y, float z) {
     return self;
 }
 
-- (void)setInValue1:(vec_float1)inValue {
-    _vec_float1.x = inValue.x;
+- (void)setInValue1:(simd_float1)inValue {
+    _simd_float1 = inValue;
 }
 
 - (void)mslEncodeCompleted {
     //正数向正方向拉伸
     //负数向负方向拉伸
     //设置x的值会导致x轴左半部分不显示
-    float *mat = projectionMatrix(projectMatrix, 0, _vec_float1.x * 2, 1);
+    float *mat = projectionMatrix(projectMatrix, 0, _simd_float1 * 2, 1);
     [self.commandEncoder setVertexBytes: mat length: sizeof(projectMatrix) atIndex: 2];
 }
 

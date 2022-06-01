@@ -11,6 +11,7 @@
 #import "CGMetalVideoController.h"
 #import "CGMetalEncodeController.h"
 #import "CGMetalShowController.h"
+#import "CGMetalMutilController.h"
 
 @interface CGMetalSourceController ()
 {
@@ -32,7 +33,8 @@
                    @"video input",
                    @"video encode",
                    @"video decode",
-                   @"effect"];
+                   @"effect",
+                   @"mutil"];
 }
 
 #pragma mark - Table view data source
@@ -89,6 +91,9 @@
 
     } else if ([type isEqualToString:@"effect"]) {
         CGMetalListController *vc = [[CGMetalListController alloc] initWithStyle:(UITableViewStyleGrouped)];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if ([type isEqualToString:@"mutil"]) {
+        CGMetalMutilController *vc = [[CGMetalMutilController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

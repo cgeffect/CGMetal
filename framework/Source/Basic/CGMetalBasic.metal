@@ -18,10 +18,9 @@ CGMetalVertexShader(
 // tex表明是纹理数据，0是索引
 // buffer表明是缓存数据, 0/1是索引
 fragment float4
-CGMetalFragmentShader(
-                        VertexOut in [[ stage_in ]],
-                        texture2d<float, access::sample> tex [[ texture(0) ]]
-                        ) {
+CGMetalFragmentShader(VertexOut in [[ stage_in ]],
+                      texture2d<float, access::sample> tex [[ texture(0) ]])
+{
     float4 color = tex.sample(texSampler, in.texCoordinate);
     return color;
 }
@@ -30,9 +29,46 @@ CGMetalFragmentShader(
 fragment float4
 CGMetalFragmentShader1(VertexOut in [[ stage_in ]],
                        texture2d<float, access::sample> tex [[ texture(0) ]],
-                       sampler sampler2D [[ sampler(0) ]]) {
+                       sampler sampler2D [[ sampler(0) ]])
+{
     float4 color = tex.sample(sampler2D, in.texCoordinate);
     return color;
 }
 
+fragment float4
+CGMetalFragmentTwoShader(VertexOut in [[ stage_in ]],
+                        texture2d<float, access::sample> tex [[ texture(0) ]],
+                        texture2d<float, access::sample> tex1 [[ texture(1) ]])
+{
+    if (in.texCoordinate.x < 0.5) {
+        float4 color = tex.sample(texSampler, in.texCoordinate);
+        return color;
+    } else {
+        float4 color = tex1.sample(texSampler, in.texCoordinate);
+        return color;
+    }
+}
+
+/*
+ NSString *const ae_gl_WipeHorizontalFS = AE_SHADER_STRING (
+    precision highp float;
+
+    varying vec2 varyTextCoord;
+    uniform sampler2D uTexture;
+    uniform sampler2D uTexture1;
+    uniform float progress;
+
+    void main()
+    {
+         highp vec2 p = varyTextCoord;
+         vec2 uv = p.xy/vec2(1.0).xy;
+         vec2 prox = vec2(progress,0);
+         vec2 prox2 = vec2(progress-1.0,0);
+         vec4 fromColor = texture2D(uTexture,(uv+prox));
+         vec4 toColor = texture2D(uTexture1,uv+prox2);
+         gl_FragColor = mix(fromColor, toColor, step(1.0 - uv.x,progress));
+
+    }
+ );
+ */
 

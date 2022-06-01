@@ -26,6 +26,8 @@ MTL_EXTERN MTLTextureLoaderOption __nonnull const MTLTextureLoaderOptionTextureU
 
 @property(nonatomic, readonly)CGSize textureSize;
 
+@property(nonatomic, assign)unsigned int texIndex;
+
 - (nonnull instancetype)initWithDevice:(nonnull id <MTLDevice>)device;
 
 #pragma mark -

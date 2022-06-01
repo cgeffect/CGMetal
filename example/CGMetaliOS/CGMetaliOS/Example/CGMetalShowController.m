@@ -169,7 +169,7 @@
 }
 
 - (void)valueChange:(UISlider *)slide {
-    vec_float1 value = {slide.value};
+    simd_float1 value = {slide.value};
     [_filter setInValue1:value];
     [_inputSource requestRender];
 }

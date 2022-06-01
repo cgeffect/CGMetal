@@ -46,7 +46,7 @@
     [CGMetalCameraInput checkCameraAuthor];
     [CGMetalCameraInput checkMicrophoneAuthor];
     filter = [[CGMetalShake alloc] init];
-    vec_float1 v = {2};
+    simd_float1 v = {2};
     [filter setInValue1:v];
 
     NSURL *outUrl = [NSURL fileURLWithPath:[self createFile:@"out.mp4"]];

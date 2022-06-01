@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9615EBA52847B3E00031CFFC /* ICGMetalBasic.h in Headers */ = {isa = PBXBuildFile; fileRef = 9615EBA12847B3E00031CFFC /* ICGMetalBasic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9615EBA62847B3E00031CFFC /* CGMetalTwoBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 9615EBA22847B3E00031CFFC /* CGMetalTwoBasic.m */; };
+		9615EBA72847B3E00031CFFC /* ICGMetalBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 9615EBA32847B3E00031CFFC /* ICGMetalBasic.m */; };
+		9615EBA82847B3E00031CFFC /* CGMetalTwoBasic.h in Headers */ = {isa = PBXBuildFile; fileRef = 9615EBA42847B3E00031CFFC /* CGMetalTwoBasic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9627F7D8277DFF3F0095FF8F /* CGMetalFlipY.h in Headers */ = {isa = PBXBuildFile; fileRef = 9627F7D2277DFF3E0095FF8F /* CGMetalFlipY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9627F7D9277DFF3F0095FF8F /* CGMetalFlipY.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9627F7D3277DFF3E0095FF8F /* CGMetalFlipY.metal */; };
 		9627F7DA277DFF3F0095FF8F /* CGMetalFlipY.m in Sources */ = {isa = PBXBuildFile; fileRef = 9627F7D4277DFF3F0095FF8F /* CGMetalFlipY.m */; };
@@ -98,8 +102,6 @@
 		969E8DB62779EDEB00EFD90F /* CGMetalOpenGLOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8DB42779EDEB00EFD90F /* CGMetalOpenGLOutput.m */; };
 		969E8DBD277AA63000EFD90F /* CGMetalQueueContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8DBB277AA63000EFD90F /* CGMetalQueueContext.m */; };
 		969E8DBE277AA63000EFD90F /* CGMetalQueueContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 969E8DBC277AA63000EFD90F /* CGMetalQueueContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		969E8DE7277B4A6E00EFD90F /* CGMetalBasicTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8DE1277B4A6E00EFD90F /* CGMetalBasicTwo.m */; };
-		969E8DE9277B4A6E00EFD90F /* CGMetalBasicTwo.h in Headers */ = {isa = PBXBuildFile; fileRef = 969E8DE3277B4A6E00EFD90F /* CGMetalBasicTwo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		969E8E13277D712200EFD90F /* CGMetalRotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 969E8E03277D712200EFD90F /* CGMetalRotate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		969E8E14277D712200EFD90F /* CGMetalReSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 969E8E04277D712200EFD90F /* CGMetalReSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		969E8E15277D712200EFD90F /* AePaintReSizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8E05277D712200EFD90F /* AePaintReSizeFilter.m */; };
@@ -125,6 +127,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9615EBA12847B3E00031CFFC /* ICGMetalBasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGMetalBasic.h; sourceTree = "<group>"; };
+		9615EBA22847B3E00031CFFC /* CGMetalTwoBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalTwoBasic.m; sourceTree = "<group>"; };
+		9615EBA32847B3E00031CFFC /* ICGMetalBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGMetalBasic.m; sourceTree = "<group>"; };
+		9615EBA42847B3E00031CFFC /* CGMetalTwoBasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalTwoBasic.h; sourceTree = "<group>"; };
 		9627F7D2277DFF3E0095FF8F /* CGMetalFlipY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalFlipY.h; sourceTree = "<group>"; };
 		9627F7D3277DFF3E0095FF8F /* CGMetalFlipY.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CGMetalFlipY.metal; sourceTree = "<group>"; };
 		9627F7D4277DFF3F0095FF8F /* CGMetalFlipY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalFlipY.m; sourceTree = "<group>"; };
@@ -217,8 +223,6 @@
 		969E8DB42779EDEB00EFD90F /* CGMetalOpenGLOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalOpenGLOutput.m; sourceTree = "<group>"; };
 		969E8DBB277AA63000EFD90F /* CGMetalQueueContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalQueueContext.m; sourceTree = "<group>"; };
 		969E8DBC277AA63000EFD90F /* CGMetalQueueContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalQueueContext.h; sourceTree = "<group>"; };
-		969E8DE1277B4A6E00EFD90F /* CGMetalBasicTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalBasicTwo.m; sourceTree = "<group>"; };
-		969E8DE3277B4A6E00EFD90F /* CGMetalBasicTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalBasicTwo.h; sourceTree = "<group>"; };
 		969E8E03277D712200EFD90F /* CGMetalRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalRotate.h; sourceTree = "<group>"; };
 		969E8E04277D712200EFD90F /* CGMetalReSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalReSize.h; sourceTree = "<group>"; };
 		969E8E05277D712200EFD90F /* AePaintReSizeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AePaintReSizeFilter.m; sourceTree = "<group>"; };
@@ -351,14 +355,16 @@
 		969E8BE8277599FE00EFD90F /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				969E8D632775F47B00EFD90F /* CGMetalHeader.h */,
 				969E8BE9277599FE00EFD90F /* CGMetalBasic.h */,
 				969E8BF7277599FE00EFD90F /* CGMetalBasic.m */,
 				969E8BFA277599FE00EFD90F /* CGMetalBasic.metal */,
-				969E8DE3277B4A6E00EFD90F /* CGMetalBasicTwo.h */,
-				969E8DE1277B4A6E00EFD90F /* CGMetalBasicTwo.m */,
-				969E8E02277D712200EFD90F /* Transform */,
+				969E8D632775F47B00EFD90F /* CGMetalHeader.h */,
+				9615EBA42847B3E00031CFFC /* CGMetalTwoBasic.h */,
+				9615EBA22847B3E00031CFFC /* CGMetalTwoBasic.m */,
 				969E8D232775F1CC00EFD90F /* Effect */,
+				9615EBA12847B3E00031CFFC /* ICGMetalBasic.h */,
+				9615EBA32847B3E00031CFFC /* ICGMetalBasic.m */,
+				969E8E02277D712200EFD90F /* Transform */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -508,7 +514,6 @@
 				969E8D582775F1CC00EFD90F /* CGMetalSoul.h in Headers */,
 				969E8E13277D712200EFD90F /* CGMetalRotate.h in Headers */,
 				969E8E20277D712200EFD90F /* AePaintReSizeFilter.h in Headers */,
-				969E8DE9277B4A6E00EFD90F /* CGMetalBasicTwo.h in Headers */,
 				969E8E16277D712200EFD90F /* CGMetalProjection.h in Headers */,
 				969E8E19277D712200EFD90F /* CGMetalCrop.h in Headers */,
 				969E8E14277D712200EFD90F /* CGMetalReSize.h in Headers */,
@@ -529,6 +534,8 @@
 				969E92F22783306E00EFD90F /* CGMetalFlashWhite.h in Headers */,
 				969E92F42783306E00EFD90F /* CGMetalBlendScaleAlpha.h in Headers */,
 				969E8D9D2779BEE000EFD90F /* CGMetalContext.h in Headers */,
+				9615EBA52847B3E00031CFFC /* ICGMetalBasic.h in Headers */,
+				9615EBA82847B3E00031CFFC /* CGMetalTwoBasic.h in Headers */,
 				969E8DB52779EDEB00EFD90F /* CGMetalOpenGLOutput.h in Headers */,
 				969E8C98277599FE00EFD90F /* CGMetalPixelBufferSurfaceOutput.h in Headers */,
 			);
@@ -608,7 +615,9 @@
 				969E8C9B277599FE00EFD90F /* CGMetalPixelBufferSurfaceOutput.m in Sources */,
 				969E8C2F277599FE00EFD90F /* CGMetalPlayerInputMac.m in Sources */,
 				969E8E22277D712200EFD90F /* CGMetalCrop.m in Sources */,
+				9615EBA72847B3E00031CFFC /* ICGMetalBasic.m in Sources */,
 				969E92EF2783306E00EFD90F /* CGMetalFlashWhite.metal in Sources */,
+				9615EBA62847B3E00031CFFC /* CGMetalTwoBasic.m in Sources */,
 				969E8D482775F1CC00EFD90F /* CGMetalSoul.metal in Sources */,
 				969E8C39277599FE00EFD90F /* CGMetalRawDataInput.m in Sources */,
 				969E8E1C277D712200EFD90F /* CGMetalReSize.m in Sources */,
@@ -618,7 +627,6 @@
 				9627F7DA277DFF3F0095FF8F /* CGMetalFlipY.m in Sources */,
 				969E8D4A2775F1CC00EFD90F /* CGMetalSoul.m in Sources */,
 				969E8DAA2779ED0A00EFD90F /* CGMetalOutputter.m in Sources */,
-				969E8DE7277B4A6E00EFD90F /* CGMetalBasicTwo.m in Sources */,
 				969E8C2D277599FE00EFD90F /* CGMetalRender.m in Sources */,
 				969E8CA1277599FE00EFD90F /* CGMetalUIViewOutput.m in Sources */,
 				969E92ED2783306E00EFD90F /* CGMetalGlitch.m in Sources */,

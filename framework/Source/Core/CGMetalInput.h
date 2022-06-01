@@ -55,13 +55,21 @@ typedef NS_ENUM(NSUInteger, CGDataFormat) {
     CGDataFormatI420,
 };
 
+@protocol CGMetalInput <NSObject>
+
+//Attributes are defined in the protocol, and the implementation class uses the @ synthesize keyword to abstract some public attributes
+@property(nonatomic, strong)CGMetalTexture *inTexture;
+
+- (void)newTextureAvailable:(CGMetalTexture *)inTexture;
+
 #pragma mark -
 #pragma mark subclass implementation
+@optional
 /**
  * Render pipeline aspect, Can handle some business logic
  * @discussion Execution sequence step1, step2, step3, step4
  */
-@protocol CGMetalRenderPipeline <NSObject>
+//@protocol CGMetalRenderPipeline <NSObject>
 /**
  * setp1
  * set Vertex/Fragment value
@@ -82,15 +90,6 @@ typedef NS_ENUM(NSUInteger, CGDataFormat) {
  * render finished
  */
 - (void)renderCompleted;
-
-@end
-
-@protocol CGMetalInput <NSObject>
-
-//Attributes are defined in the protocol, and the implementation class uses the @ synthesize keyword to abstract some public attributes
-@property(nonatomic, strong)CGMetalTexture *inTexture;
-
-- (void)newTextureAvailable:(CGMetalTexture *)inTexture;
 
 @optional
 - (void)setInputRotation:(CGMetalRotationMode)newInputRotation atIndex:(NSInteger)textureIndex;

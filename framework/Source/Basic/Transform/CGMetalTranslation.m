@@ -27,18 +27,18 @@ float* translationMatrix(float matrix[16], float x, float y, float z) {
 - (instancetype)init {
     self = [super initWithVertexShader:kCGMetalTranslation];
     if (self) {
-//        _vec_float1.x = 1;
+//        _simd_float1 = 1;
     }
     
     return self;
 }
 
-- (void)setInValue1:(vec_float1)inValue {
-    _vec_float1.x = inValue.x;
+- (void)setInValue1:(simd_float1)inValue {
+    _simd_float1 = inValue;
 }
 
 - (void)mslEncodeCompleted {
-    float *mat = translationMatrix(transMatrix, _vec_float1.x, _vec_float1.x, 1);
+    float *mat = translationMatrix(transMatrix, _simd_float1, _simd_float1, 1);
     [self.commandEncoder setVertexBytes: mat length: sizeof(transMatrix) atIndex: 2];
 }
 

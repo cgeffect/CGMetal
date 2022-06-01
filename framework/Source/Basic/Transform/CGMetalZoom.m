@@ -34,18 +34,18 @@ float* scalingMatrix(float matrix[16], float scale) {
         _buffer = [[CGMetalDevice sharedDevice].device newBufferWithBytes: matrix
                                             length: sizeof(matrix)
                                            options: MTLResourceStorageModeShared];
-        _vec_float1.x = 1;
+        _simd_float1 = 1;
     }
     
     return self;
 }
 
-- (void)setInValue1:(vec_float1)inValue {
-    _vec_float1.x = inValue.x * 2;
+- (void)setInValue1:(simd_float1)inValue {
+    _simd_float1 = inValue * 2;
 }
 
 - (void)mslEncodeCompleted {
-    float *mat = scalingMatrix(matrix, _vec_float1.x);
+    float *mat = scalingMatrix(matrix, _simd_float1);
     [self.commandEncoder setVertexBytes: mat length: sizeof(matrix) atIndex: 2];
 }
 

@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9615EB9E2847B33C0031CFFC /* CGMetalMutilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9615EB9D2847B33C0031CFFC /* CGMetalMutilController.m */; };
 		9655B32E273581BA00491380 /* CGMetalSourceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9655B32D273581BA00491380 /* CGMetalSourceProvider.m */; };
 		966248D7283B5B5600A8208F /* CGMetal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966248D6283B5B5600A8208F /* CGMetal.framework */; };
 		966248D8283B5B5600A8208F /* CGMetal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 966248D6283B5B5600A8208F /* CGMetal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		968E33C82792A9F200A42C17 /* leftScaleAlpha.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 968E33C72792A9F200A42C17 /* leftScaleAlpha.mp4 */; };
 		969E8D67277626C700EFD90F /* CGMetalCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8D66277626C700EFD90F /* CGMetalCameraController.m */; };
 		969E8D842778898000EFD90F /* CGMetalEncodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8D832778898000EFD90F /* CGMetalEncodeController.m */; };
+		96BDCDB328434A9D009AA5EB /* CGMetalChainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BDCDB228434A9D009AA5EB /* CGMetalChainController.m */; };
 		96E9B5AC27756E2200097ABE /* I420_1120x1120.yuv in Resources */ = {isa = PBXBuildFile; fileRef = 96E9B5A427756E2200097ABE /* I420_1120x1120.yuv */; };
 		96E9B5AD27756E2200097ABE /* rgba8_1125x1125.rgba in Resources */ = {isa = PBXBuildFile; fileRef = 96E9B5A527756E2200097ABE /* rgba8_1125x1125.rgba */; };
 		96E9B5AE27756E2200097ABE /* bgra8_1125x1125.bgra in Resources */ = {isa = PBXBuildFile; fileRef = 96E9B5A627756E2200097ABE /* bgra8_1125x1125.bgra */; };
@@ -45,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9615EB9C2847B33C0031CFFC /* CGMetalMutilController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalMutilController.h; sourceTree = "<group>"; };
+		9615EB9D2847B33C0031CFFC /* CGMetalMutilController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalMutilController.m; sourceTree = "<group>"; };
 		9655B32C273581BA00491380 /* CGMetalSourceProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGMetalSourceProvider.h; sourceTree = "<group>"; };
 		9655B32D273581BA00491380 /* CGMetalSourceProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGMetalSourceProvider.m; sourceTree = "<group>"; };
 		966248D6283B5B5600A8208F /* CGMetal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CGMetal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +57,8 @@
 		969E8D66277626C700EFD90F /* CGMetalCameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGMetalCameraController.m; sourceTree = "<group>"; };
 		969E8D822778898000EFD90F /* CGMetalEncodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGMetalEncodeController.h; sourceTree = "<group>"; };
 		969E8D832778898000EFD90F /* CGMetalEncodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGMetalEncodeController.m; sourceTree = "<group>"; };
+		96BDCDB128434A9D009AA5EB /* CGMetalChainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGMetalChainController.h; sourceTree = "<group>"; };
+		96BDCDB228434A9D009AA5EB /* CGMetalChainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGMetalChainController.m; sourceTree = "<group>"; };
 		96E9B5A427756E2200097ABE /* I420_1120x1120.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = I420_1120x1120.yuv; sourceTree = "<group>"; };
 		96E9B5A527756E2200097ABE /* rgba8_1125x1125.rgba */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rgba8_1125x1125.rgba; sourceTree = "<group>"; };
 		96E9B5A627756E2200097ABE /* bgra8_1125x1125.bgra */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bgra8_1125x1125.bgra; sourceTree = "<group>"; };
@@ -115,6 +121,8 @@
 		E5C195A9265DEBF0003AC764 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				9615EB9C2847B33C0031CFFC /* CGMetalMutilController.h */,
+				9615EB9D2847B33C0031CFFC /* CGMetalMutilController.m */,
 				969E8D65277626C700EFD90F /* CGMetalCameraController.h */,
 				969E8D66277626C700EFD90F /* CGMetalCameraController.m */,
 				969E8D822778898000EFD90F /* CGMetalEncodeController.h */,
@@ -131,6 +139,8 @@
 				E5FE985D2665D6C300548BB1 /* CGMetalVideoController.m */,
 				E5FE98642665D6C400548BB1 /* CGPreviewController.h */,
 				E5FE98632665D6C400548BB1 /* CGPreviewController.m */,
+				96BDCDB128434A9D009AA5EB /* CGMetalChainController.h */,
+				96BDCDB228434A9D009AA5EB /* CGMetalChainController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -253,8 +263,10 @@
 				E5FE986A2665D6C400548BB1 /* CGPreviewController.m in Sources */,
 				E5FE98672665D6C400548BB1 /* CGMetalVideoController.m in Sources */,
 				E5FE98662665D6C400548BB1 /* CGMetalListController.m in Sources */,
+				96BDCDB328434A9D009AA5EB /* CGMetalChainController.m in Sources */,
 				9655B32E273581BA00491380 /* CGMetalSourceProvider.m in Sources */,
 				E5FE98682665D6C400548BB1 /* CGMetalSourceController.m in Sources */,
+				9615EB9E2847B33C0031CFFC /* CGMetalMutilController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

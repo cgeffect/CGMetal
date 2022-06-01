@@ -43,7 +43,7 @@
     _surfaceOutput.encodeParam = encodeParam;
     
     filter = [[CGMetalShake alloc] init];
-    vec_float1 v = {2};
+    simd_float1 v = {2};
     [filter setInValue1:v];
     [_videoInput addTarget:filter];
     [filter addTarget:_surfaceOutput];

@@ -19,11 +19,11 @@
     return self;
 }
 
-- (void)setInValue1:(vec_float1)inValue {
-    _vec_float1 = inValue;
+- (void)setInValue1:(simd_float1)inValue {
+    _simd_float1 = inValue;
 }
 
 - (void)mslEncodeCompleted {
-    [self setVertexValue1:_vec_float1 index:2];
+    [self setVertexValue1:_simd_float1 index:2];
 }
 @end

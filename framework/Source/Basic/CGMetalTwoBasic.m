@@ -1,17 +1,17 @@
 //
-//  CGMetalBasic.m
+//  CGMetalTwoBasic.m
 //  CGMetal
 //
-//  Created by Jason on 2021/5/13.
-//  Copyright © 2021 CGMetal. All rights reserved.
+//  Created by Jason on 2021/12/28.
 //
 
-#import "CGMetalBasic.h"
+#import "CGMetalTwoBasic.h"
+@import CoreGraphics;
 
 #define VertexShader @"CGMetalVertexShader"
-#define FragmentShader @"CGMetalFragmentShader"
+#define FragmentShader @"CGMetalFragmentTwoShader"
 
-@interface CGMetalBasic ()
+@interface CGMetalTwoBasic ()
 {
     id<MTLCommandQueue> _commandQueue;
     id<MTLBuffer> _indexBuffer;
@@ -21,10 +21,12 @@
     id<MTLSamplerState> _sampleState;
     id<MTLRenderCommandEncoder> encoder;
     CGMetalRotationMode _rotationMode;
+    CGSize _renderFBOSize;
+    CGMetalTexture *_inTexture1;
 }
 @end
 
-@implementation CGMetalBasic
+@implementation CGMetalTwoBasic
 
 @synthesize inTexture = _inTexture;
 
@@ -78,17 +80,25 @@
     _rotationMode = newInputRotation;
 }
 
+//进入到这里的tex是已经在外面把fbo设置成同样尺寸之后
 - (void)newTextureAvailable:(CGMetalTexture *)inTexture {
-    _inTexture = inTexture;
-    [self newTextureInput:_inTexture];
+    if (inTexture.texIndex == 0) {
+        _inTexture = inTexture;
+    } else if (inTexture.texIndex == 1) {
+        _inTexture1 = inTexture;
+    }
+    [self newTextureInput:inTexture];
     
+    if (_inTexture1 == nil || _inTexture1 == nil) {
+        return;
+    }
     id<MTLTexture> texture = [_outTexture newTexture:MTLPixelFormatRGBA8Unorm size:inTexture.textureSize usege:MTLTextureUsageShaderRead | MTLTextureUsageRenderTarget];
 
     //set render target texture, MTLTexture can be reuse
     [_mtlRender setOutTexture:texture
                            index:0];
-    [self renderToTextureWithVertices:self.getVertices
-                   textureCoordinates:self.getTextureCoordinates];
+    [self renderToTextureWithVertices:[self getVertices]
+                   textureCoordinates:[self getTextureCoordinates]];
     [self notifyNextTargetsAboutNewTexture:_outTexture];
 }
 
@@ -136,7 +146,10 @@
     [encoder setFragmentTexture: _inTexture.texture
                         atIndex: 0];
     
-//    // set texture sample param in cpu or set texture sample param in shader
+    [encoder setFragmentTexture: _inTexture1.texture
+                        atIndex: 1];
+    
+    // set texture sample param in cpu or set texture sample param in shader
 //    _sampleState = [self defaultSampler];
 //    [encoder setFragmentSamplerState:_sampleState
 //                             atIndex:0];
@@ -234,8 +247,29 @@
 - (id<MTLRenderCommandEncoder>)commandEncoder {
     return encoder;
 }
-- (void)dealloc
-{
+//
+//- (void)setDataSize:(NSArray<NSValue *> *)sizeList {
+//    CGSize maxSize = CGSizeZero;
+//    float maxAspect = 0;
+//    for (NSValue *value in sizeList) {
+//        CGSize dataSize = value.CGSizeValue;
+//        float aspect = dataSize.height / dataSize.width;
+//        if (aspect > maxAspect) {
+//            maxSize = dataSize;
+//            maxAspect = aspect;
+//        }
+//    }
+//    _renderFBOSize = maxSize;
+//}
+//
+//- (BOOL)isNeedCrop:(CGSize)size {
+//    if (CGSizeEqualToSize(size, _renderFBOSize)) {
+//        return NO;
+//    }
+//    return YES;
+//}
+
+- (void)dealloc {
     
 }
 

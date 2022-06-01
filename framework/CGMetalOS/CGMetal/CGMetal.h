@@ -1,6 +1,6 @@
 //
-//  CGMetalOS.h
-//  CGMetalOS
+//  CGMetal.h
+//  CGMetal
 //
 //  Created by Jason on 2021/5/25.
 //
@@ -13,11 +13,12 @@ FOUNDATION_EXPORT double CGMetalVersionNumber;
 //! Project version string for CGMetal.
 FOUNDATION_EXPORT const unsigned char CGMetalVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <CGMetalOS/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <CGMetal/PublicHeader.h>
 
 #pragma mark -
 #pragma mark Basic
 #import "CGMetalBasic.h"
+#import "CGMetalTwoBasic.h"
 #import "CGMetalShake.h"
 #import "CGMetalFlipX.h"
 #import "CGMetalFlipY.h"
@@ -33,6 +34,7 @@ FOUNDATION_EXPORT const unsigned char CGMetalVersionString[];
 #import "CGMetalProjection.h"
 #import "CGMetalWobble.h"
 #import "CGMetalBlendScaleAlpha.h"
+#import "CGMetalBlendAlpha.h"
 
 #pragma mark -
 #pragma mark Input
@@ -61,3 +63,4 @@ FOUNDATION_EXPORT const unsigned char CGMetalVersionString[];
 #else
 #import "CGMetalNSViewOutput.h"
 #endif
+

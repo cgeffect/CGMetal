@@ -60,22 +60,22 @@ float* rotateMatrixZ(float matrix[16], struct Rotate rot) {
 - (instancetype)init {
     self = [super initWithVertexShader:kCGMetalRotate];
     if (self) {
-//        _vec_float1.x = 1;
+//        _simd_float1 = 1;
     }
     return self;
 }
 
-- (void)setInValue1:(vec_float1)inValue {
-    _vec_float1.x = inValue.x;
+- (void)setInValue1:(simd_float1)inValue {
+    _simd_float1 = inValue;
 }
 
 - (void)mslEncodeCompleted {
 //    _rotate.x = 0;
 //    _rotate.y = 0;
-//    _rotate.z = _vec_float1.x;
+//    _rotate.z = _simd_float1;
 //    float *mat = rotateMatrix(rotMatrix, _rotate);
 
-    float radX = _vec_float1.x * 360 * M_PI / 180.0;
+    float radX = _simd_float1 * 360 * M_PI / 180.0;
     _rotate.x = radX;
     float *matX = rotateMatrixZ(rotMatrix, _rotate);
     [self.commandEncoder setVertexBytes: matX length: sizeof(rotMatrix) atIndex: 2];
