@@ -67,20 +67,23 @@
 }
 
 - (void)stopOutput {
-    [_videoEncode stopEncode];
+    [_videoEncode stop];
 }
 
 #pragma mark - CGMetalRenderOutputDelegate
 - (void)onRenderCompleted:(CGMetalPixelBufferSurfaceOutput *)thiz receivedPixelBufferFromTexture:(CVPixelBufferRef)pixelBuffer {
-//    int width = (int)CVPixelBufferGetWidth(pixelBuffer);
-//    int height = (int)CVPixelBufferGetHeight(pixelBuffer);
     if (_isStart == NO) {
         _encodeParam.savePath = _dstURL.relativePath;
-        [self->_videoEncode prepareEncode:_encodeParam];
+        [self.videoEncode ready:_encodeParam];
         _isStart = YES;
     }
 
-    [self->_videoEncode appendPixelBuffer:pixelBuffer];
+    if (pixelBuffer == NULL) {
+        NSLog(@"Encode Param is Nil");
+        return;
+    }
+
+    [self.videoEncode append:pixelBuffer];
 }
 
 #pragma mark - CGVideoEncoderDelegate
@@ -90,8 +93,6 @@
 @import VideoToolbox;
 @import AVFoundation;
 
-#define LIMIT_RETRY_COUNT 50
-
 typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
     CGMetelEncodeStatusNone = 0,
     CGMetelEncodeStatusStopped = 1,
@@ -99,19 +100,20 @@ typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
 };
 
 @interface CGMetalVideoEncoder () {
-    BOOL _haveStartedSession;
     int _succCount, _failCount, _repeatCount;
-    NSTimeInterval _encodeCostTimeS;
-    BOOL _isEncodeFinished, _isEncodeFail;
     dispatch_semaphore_t _semLock;
-    CGSize _videSize;
-    int _encodedFrameCount;
-    CGMetelEncodeStatus _status;
 }
+@property(nonatomic, assign)BOOL encodeFail;
+@property(nonatomic, assign)BOOL encodeOK;
+@property(nonatomic, assign)CGSize videSize;
+@property(nonatomic, assign)int encodedFrameCount;
+@property(nonatomic, assign)CGMetelEncodeStatus status;
+@property(nonatomic, assign)BOOL startedSession;
 @property(nonatomic, strong)AVAssetWriter *assetWriter;
 @property(nonatomic, strong)AVAssetWriterInput *assetWriterInput;
-@property(nonatomic, strong)AVAssetWriterInputPixelBufferAdaptor *assetWriterPixelBufferAdaptor;
+@property(nonatomic, strong)AVAssetWriterInputPixelBufferAdaptor *pixelBufferAdaptor;
 @property(nonatomic, strong)CGMetalEncodeParam *encodeParam;
+@property(nonatomic, assign)NSTimeInterval costTime;
 @end
 
 @implementation CGMetalVideoEncoder
@@ -126,9 +128,7 @@ typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
     return self;
 }
 
-#pragma mark - IVideoEncoder
-- (void)prepareEncode:(CGMetalEncodeParam *)param {
-    NSLog(@"========= Encode Begin =========");
+- (void)ready:(CGMetalEncodeParam *)param {
     _encodeParam = param;
     if (_status == CGMetelEncodeStatusEncoding) {
         return;
@@ -139,19 +139,19 @@ typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(encoder:onError:)]) {
             [self.delegate encoder:self onError:-1];
         }
-        _isEncodeFail = YES;
+        _encodeFail = YES;
         return;
     }
     if (self.delegate && [self.delegate respondsToSelector:@selector(onStart:)]) {
         [self.delegate onStart:self];
     }
     _status = CGMetelEncodeStatusEncoding;
-    _encodeCostTimeS = [[NSDate date] timeIntervalSince1970];
+    _costTime = [[NSDate date] timeIntervalSince1970];
 }
 
 - (BOOL)prepareAssetWriter:(NSURL *)saveURL {
     @autoreleasepool {
-        _isEncodeFail = false;
+        _encodeFail = false;
         NSError *error = nil;
         //saveURL不需要自己创建文件,AVAssetWriter会自动创建
         self->_assetWriter = [[AVAssetWriter alloc] initWithURL:saveURL fileType:AVFileTypeMPEG4 error:&error];
@@ -168,13 +168,12 @@ typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
             AVVideoProfileLevelKey:AVVideoProfileLevelH264BaselineAutoLevel
         };
         outputSettings = @{
-           AVVideoCodecKey: AVVideoCodecH264,
+            AVVideoCodecKey: AVVideoCodecTypeH264,
            AVVideoWidthKey: @(self->_videSize.width),
            AVVideoHeightKey: @(self->_videSize.height),
            AVVideoCompressionPropertiesKey: compressionProperties
        };
         
-        NSLog(@"encode setting: %@", outputSettings);
         if ([self->_assetWriter canApplyOutputSettings:outputSettings forMediaType:AVMediaTypeVideo]) {
             self->_assetWriterInput = [[AVAssetWriterInput alloc] initWithMediaType:AVMediaTypeVideo outputSettings:outputSettings];
             if ([self->_assetWriter canAddInput:self->_assetWriterInput]) {
@@ -189,7 +188,7 @@ typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
                                              @((int) self->_videSize.width), kCVPixelBufferWidthKey,
                                              @((int) self->_videSize.height), kCVPixelBufferHeightKey,
                         nil];
-        _assetWriterPixelBufferAdaptor = [AVAssetWriterInputPixelBufferAdaptor assetWriterInputPixelBufferAdaptorWithAssetWriterInput:_assetWriterInput sourcePixelBufferAttributes:sourcePixelBufferAttributesDictionary];
+        _pixelBufferAdaptor = [AVAssetWriterInputPixelBufferAdaptor assetWriterInputPixelBufferAdaptorWithAssetWriterInput:_assetWriterInput sourcePixelBufferAttributes:sourcePixelBufferAttributesDictionary];
         if (self->_assetWriterInput == NULL) {
             NSString *exceptionReason = [NSString stringWithFormat:@"sample buffer create failed "];
             NSLog(@"writerInput %@", exceptionReason);
@@ -204,10 +203,10 @@ typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
     }
 }
 
-- (void)stopEncode {
-    _isEncodeFinished = YES;
-    NSLog(@"total encode count: %d, once encode count: %d, repeat encode count: %d, fail encode count: %d", _encodedFrameCount, _succCount, _repeatCount, _failCount);
-    NSLog(@"encode video costTime = %f s", ([[NSDate date] timeIntervalSince1970] - _encodeCostTimeS));
+- (void)stop {
+    _encodeOK = YES;
+//    NSLog(@"total encode count: %d, once encode count: %d, repeat encode count: %d, fail encode count: %d", _encodedFrameCount, _succCount, _repeatCount, _failCount);
+//    NSLog(@"encode video costTime = %f s", ([[NSDate date] timeIntervalSince1970] - _costTime));
     //生成视频
     if (_assetWriter.status != AVAssetWriterStatusWriting) {
         NSLog(@"encode exception do not call finishWritingWithCompletionHandler when status is %ld", (long)_assetWriter.status);
@@ -219,26 +218,17 @@ typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
         dispatch_semaphore_signal(self->_semLock);
     }];
     dispatch_semaphore_wait(_semLock, DISPATCH_TIME_FOREVER);
-    NSLog(@"========= Encode End =========");
-    if (!_isEncodeFail && self.delegate && [self.delegate respondsToSelector:@selector(encoder:onFinish:)]) {
+    if (!_encodeFail && self.delegate && [self.delegate respondsToSelector:@selector(encoder:onFinish:)]) {
         [self.delegate encoder:self onFinish:_encodeParam.savePath];
     }
 }
 
 #pragma mark - encode
-- (void)appendPixelBuffer:(CVPixelBufferRef)pixelbuffer {
-    if (pixelbuffer == NULL) {
-        NSLog(@"Encode Param is Nil");
+- (void)append:(CVPixelBufferRef)pixelbuffer {
+    if (_encodeOK || _encodeFail) {
         return;
     }
-    if (_isEncodeFail) {
-        NSLog(@"Encode Failure");
-        return;
-    }
-    if (_isEncodeFinished) {
-        return;
-    }
-    
+
     int fps = _encodeParam.videoRate;
     int oneFrameDuration = 1000 / fps;
     int pts = _encodedFrameCount * oneFrameDuration;
@@ -246,7 +236,9 @@ typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
     _encodedFrameCount++;
 
     NSTimeInterval startMs = [[NSDate date] timeIntervalSince1970];
-    [self appendVideoPixelBuffer:pixelbuffer withPresentationTime:presentationTime];
+    @autoreleasepool {
+        [self appendVideoPixelBuffer:pixelbuffer withPresentationTime:presentationTime];
+    }
     NSTimeInterval endMs = [[NSDate date] timeIntervalSince1970];
     NSLog(@"encode index:%d, total:%d, time: %f, costTime: %f",_encodedFrameCount, _encodeParam.frameCount, CMTimeGetSeconds(presentationTime) * 1000, (endMs - startMs) * 1000);
     float progress = self->_encodedFrameCount * 1.0f /self-> _encodeParam.frameCount;
@@ -258,67 +250,61 @@ typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
 }
 
 - (void)appendVideoPixelBuffer:(CVPixelBufferRef)pixelBuffer withPresentationTime:(CMTime)presentationTime {
-    @autoreleasepool {
-        if (pixelBuffer) {
-            @autoreleasepool {
-                if (!self->_haveStartedSession && _assetWriter.status == AVAssetWriterStatusWriting) {
-                    [self->_assetWriter startSessionAtSourceTime:presentationTime];
-                    self->_haveStartedSession = YES;
-                }
-                AVAssetWriterInput *writerInput = self->_assetWriterInput;
-                BOOL isComplete = false;
-                int loopCount = 0;
-                NSTimeInterval costTime = [[NSDate date] timeIntervalSince1970] * 1000;
-                while (!isComplete && loopCount < LIMIT_RETRY_COUNT) {
-                    if (writerInput.readyForMoreMediaData) {
-                        BOOL success = false;
-                        //通过try-catch捕获startSessionAtSourceTime未开启的异常
-                        @try {
-                            success = [_assetWriterPixelBufferAdaptor appendPixelBuffer:pixelBuffer withPresentationTime:presentationTime];
-                        } @catch (NSException *exception) {
-                            [self encodeOnStop];
-                            _isEncodeFail = true;
-                            if (self.delegate && [self.delegate respondsToSelector:@selector(encoder:onError:)]) {
-                                [self.delegate encoder:self onError:-1];
-                            }
-                            break;
-                        } @finally {
-
+    if (pixelBuffer) {
+        @autoreleasepool {
+            if (!self->_startedSession && _assetWriter.status == AVAssetWriterStatusWriting) {
+                [self->_assetWriter startSessionAtSourceTime:presentationTime];
+                self->_startedSession = YES;
+            }
+            AVAssetWriterInput *writerInput = self->_assetWriterInput;
+            BOOL isComplete = false;
+            int loopCount = 0;
+            NSTimeInterval costTime = [[NSDate date] timeIntervalSince1970] * 1000;
+            while (!isComplete && loopCount < 50) {
+                if (writerInput.readyForMoreMediaData) {
+                    BOOL success = false;
+                    @try {
+                        success = [_pixelBufferAdaptor appendPixelBuffer:pixelBuffer withPresentationTime:presentationTime];
+                    } @catch (NSException *exception) {
+                        [self encodeOnStop];
+                        _encodeFail = true;
+                        if (self.delegate && [self.delegate respondsToSelector:@selector(encoder:onError:)]) {
+                            [self.delegate encoder:self onError:-1];
                         }
-                        if (success) {
-                            isComplete = true;
-                        } else {
-                            NSError *error = self->_assetWriter.error;
-                            NSLog(@"encode fail: %@", error);
-                            isComplete = false;
-                        }
-                        //无论成功或失败都要退出循环
                         break;
+                    } @finally {
+
+                    }
+                    if (success) {
+                        isComplete = true;
                     } else {
-                        NSLog(@"input not ready for more media data, dropping buffer");
+                        NSLog(@"encode fail: %@", self->_assetWriter.error);
                         isComplete = false;
-                        loopCount++;
-                        usleep(5 * 1000);
                     }
-                }
-                if (isComplete) {
-                    if (loopCount) {
-                        self->_repeatCount++;
-                        costTime = [[NSDate date] timeIntervalSince1970] * 1000 - costTime;
-                        NSLog(@"encode once success cost time: %f ms, loop encode count %ld", (float) costTime, (long) loopCount);
-                    } else {
-                        self->_succCount++;
-                    }
+                    break;
                 } else {
-                    self->_failCount++;
-                    NSLog(@"encode once fail cost time: %f ms, loop encode count %ld", (float) costTime, (long) loopCount);
+                    NSLog(@"input not ready for more media data, dropping buffer");
+                    isComplete = false;
+                    loopCount++;
+                    usleep(5 * 1000);
                 }
+            }
+            if (isComplete) {
+                if (loopCount) {
+                    self->_repeatCount++;
+                    costTime = [[NSDate date] timeIntervalSince1970] * 1000 - costTime;
+                    NSLog(@"encode once success cost time: %f ms, loop encode count %ld", (float) costTime, (long) loopCount);
+                } else {
+                    self->_succCount++;
+                }
+            } else {
+                self->_failCount++;
+                NSLog(@"encode once fail cost time: %f ms, loop encode count %ld", (float) costTime, (long) loopCount);
             }
         }
     }
 }
 
-#pragma mark - life
 - (void)destroy {
     NSLog(@"CGMetalVideoEncoder destroy");
     if (_assetWriter) {
@@ -335,7 +321,6 @@ typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
 
 - (void)encodeOnStop {
     NSLog(@"encodeOnStop");
-    //执行下一次startWriting, 必须要先cancel
     if (_assetWriter.status != AVAssetWriterStatusFailed || _assetWriter.status != AVAssetWriterStatusCompleted) {
         [_assetWriter cancelWriting];
     }

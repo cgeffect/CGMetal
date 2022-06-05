@@ -28,7 +28,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"hevc_alpha" ofType:@"mov"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"leftScaleAlpha" ofType:@"mp4"];
     NSURL *srcUrl = [NSURL fileURLWithPath:path];
     NSURL *outUrl = [NSURL fileURLWithPath:[self creatFile:@"out.mp4"]];
     _videoInput = [[CGMetalVideoInput alloc] initWithURL:srcUrl pixelFormat:CGPixelFormatNV12];
@@ -42,7 +42,7 @@
     encodeParam.videoRate = _videoInput.videoInfo.frameRate;
     _surfaceOutput.encodeParam = encodeParam;
     
-    filter = [[CGMetalShake alloc] init];
+    filter = [[CGMetalGray alloc] init];
     simd_float1 v = {2};
     [filter setInValue1:v];
     [_videoInput addTarget:filter];

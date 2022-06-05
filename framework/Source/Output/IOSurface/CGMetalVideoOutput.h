@@ -52,11 +52,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign)BOOL expectsMediaDataInRealTime; //default value is NO
 
-- (void)prepareEncode:(CGMetalEncodeParam *)param;
+- (void)ready:(CGMetalEncodeParam *)param;
 
-- (void)stopEncode;
+- (void)stop;
 
-- (void)appendPixelBuffer:(CVPixelBufferRef)pixelbuffer;
+- (void)append:(CVPixelBufferRef)pixelbuffer;
 
 - (void)destroy;
 

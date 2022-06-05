@@ -35,16 +35,12 @@
 + (int)getVideoRotateFromTransform:(CGAffineTransform)transform {
     int degree = 0;
     if (transform.a == 0 && transform.b == 1 && transform.c == -1 && transform.d == 0) {
-        // Portrait
         degree = 90;
     } else if (transform.a == 0 && transform.b == -1 && transform.c == 1 && transform.d == 0) {
-        // PortraitUpsideDown
         degree = 270;
     } else if (transform.a == 1 && transform.b == 0 && transform.c == 0 && transform.d == 1) {
-        // LandscapeRight 横屏home键在右边
         degree = 0;
     } else if (transform.a == -1 && transform.b == 0 && transform.c == 0 && transform.d == -1) {
-        // LandscapeLeft 横屏home键在左边
         degree = 180;
     }
     return degree;
