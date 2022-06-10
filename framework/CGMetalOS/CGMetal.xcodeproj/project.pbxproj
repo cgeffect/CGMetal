@@ -475,7 +475,6 @@
 		969E8E01277D709300EFD90F /* Transform */ = {
 			isa = PBXGroup;
 			children = (
-				968E33C92792AA9C00A42C17 /* CGMetalProjection.metal */,
 				969E8D122775F0BD00EFD90F /* AePaintReSizeFilter.h */,
 				969E8D132775F0BD00EFD90F /* AePaintReSizeFilter.m */,
 				969E8D192775F10600EFD90F /* CGMetalCrop.h */,
@@ -488,6 +487,7 @@
 				969E8ACA277599EF00EFD90F /* CGMetalFlipY.metal */,
 				969E8DFD277D705400EFD90F /* CGMetalProjection.h */,
 				969E8DFE277D705400EFD90F /* CGMetalProjection.m */,
+				968E33C92792AA9C00A42C17 /* CGMetalProjection.metal */,
 				969E8D1D2775F11800EFD90F /* CGMetalReSize.h */,
 				969E8D1E2775F11800EFD90F /* CGMetalReSize.m */,
 				969E8DF9277D703400EFD90F /* CGMetalRotate.h */,
