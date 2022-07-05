@@ -33,7 +33,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     
     _metalView = [[CGMetalUIViewOutput alloc] initWithFrame:CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.width)];
-    _metalView.backgroundColor = UIColor.redColor;
+    _metalView.backgroundColor = UIColor.clearColor;
     [self.view addSubview:_metalView];
     
     UISlider *slide = [[UISlider alloc] initWithFrame:CGRectMake(30, UIScreen.mainScreen.bounds.size.height - 100, UIScreen.mainScreen.bounds.size.width - 60, 50)];

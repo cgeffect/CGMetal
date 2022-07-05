@@ -33,7 +33,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];;
     
     _metalView = [[CGMetalUIViewOutput alloc] initWithFrame:CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.width)];
-    _metalView.backgroundColor = UIColor.redColor;
+    _metalView.backgroundColor = UIColor.clearColor;
     [self.view addSubview:_metalView];
     
     [self setInputSource];
@@ -182,7 +182,7 @@
     UIImage *image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationUp];
     CGPreviewController *preview = [[CGPreviewController alloc] init];
     preview.image = image;
-//    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
     [self.navigationController pushViewController:preview animated:YES];
 }
 
