@@ -1,6 +1,6 @@
 //
 //  CGMetalRotate.metal
-//  CGMetalOS
+//  CGMetal
 //
 //  Created by Jason on 2022/1/1.
 //  Copyright © 2022 com.metal.Jason. All rights reserved.

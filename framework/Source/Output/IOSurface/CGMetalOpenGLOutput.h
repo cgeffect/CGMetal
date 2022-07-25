@@ -1,6 +1,6 @@
 //
 //  CGMetalOpenGLOutput.h
-//  CGMetalOS
+//  CGMetal
 //
 //  Created by Jason on 2021/12/27.
 //

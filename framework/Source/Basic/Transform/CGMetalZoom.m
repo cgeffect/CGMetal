@@ -1,6 +1,6 @@
 //
 //  CGMetalZoom.m
-//  CGMetalOS
+//  CGMetal
 //
 //  Created by Jason on 2021/12/30.
 //

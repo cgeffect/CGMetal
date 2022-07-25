@@ -94,8 +94,6 @@
 		969E8B82277599F000EFD90F /* CGMetalNSViewOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 969E8AFC277599F000EFD90F /* CGMetalNSViewOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		969E8CF92775DD4700EFD90F /* CGMetal.docc in Sources */ = {isa = PBXBuildFile; fileRef = 969E8CF72775DD4600EFD90F /* CGMetal.docc */; };
 		969E8CFA2775DD4700EFD90F /* CGMetal.h in Headers */ = {isa = PBXBuildFile; fileRef = 969E8CF82775DD4600EFD90F /* CGMetal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		969E8D162775F0BD00EFD90F /* AePaintReSizeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 969E8D122775F0BD00EFD90F /* AePaintReSizeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		969E8D172775F0BD00EFD90F /* AePaintReSizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8D132775F0BD00EFD90F /* AePaintReSizeFilter.m */; };
 		969E8D1B2775F10600EFD90F /* CGMetalCrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 969E8D192775F10600EFD90F /* CGMetalCrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		969E8D1C2775F10600EFD90F /* CGMetalCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E8D1A2775F10600EFD90F /* CGMetalCrop.m */; };
 		969E8D1F2775F11800EFD90F /* CGMetalReSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 969E8D1D2775F11800EFD90F /* CGMetalReSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -224,8 +222,6 @@
 		969E8AFC277599F000EFD90F /* CGMetalNSViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalNSViewOutput.h; sourceTree = "<group>"; };
 		969E8CF72775DD4600EFD90F /* CGMetal.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CGMetal.docc; sourceTree = "<group>"; };
 		969E8CF82775DD4600EFD90F /* CGMetal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetal.h; sourceTree = "<group>"; };
-		969E8D122775F0BD00EFD90F /* AePaintReSizeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AePaintReSizeFilter.h; sourceTree = "<group>"; };
-		969E8D132775F0BD00EFD90F /* AePaintReSizeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AePaintReSizeFilter.m; sourceTree = "<group>"; };
 		969E8D192775F10600EFD90F /* CGMetalCrop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGMetalCrop.h; sourceTree = "<group>"; };
 		969E8D1A2775F10600EFD90F /* CGMetalCrop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGMetalCrop.m; sourceTree = "<group>"; };
 		969E8D1D2775F11800EFD90F /* CGMetalReSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGMetalReSize.h; sourceTree = "<group>"; };
@@ -475,8 +471,6 @@
 		969E8E01277D709300EFD90F /* Transform */ = {
 			isa = PBXGroup;
 			children = (
-				969E8D122775F0BD00EFD90F /* AePaintReSizeFilter.h */,
-				969E8D132775F0BD00EFD90F /* AePaintReSizeFilter.m */,
 				969E8D192775F10600EFD90F /* CGMetalCrop.h */,
 				969E8D1A2775F10600EFD90F /* CGMetalCrop.m */,
 				969E8ADB277599EF00EFD90F /* CGMetalFlipX.h */,
@@ -547,7 +541,6 @@
 				969E8B55277599F000EFD90F /* CGMetalShake.h in Headers */,
 				969E8B82277599F000EFD90F /* CGMetalNSViewOutput.h in Headers */,
 				969E8B02277599F000EFD90F /* CGMetalSourfaceTexture.h in Headers */,
-				969E8D162775F0BD00EFD90F /* AePaintReSizeFilter.h in Headers */,
 				969E8D1F2775F11800EFD90F /* CGMetalReSize.h in Headers */,
 				969E8DF3277D6FBA00EFD90F /* CGMetalZoom.h in Headers */,
 				969E8DFB277D703400EFD90F /* CGMetalRotate.h in Headers */,
@@ -685,7 +678,6 @@
 				969E8B73277599F000EFD90F /* CGMetalTextureOutput.m in Sources */,
 				969E8B05277599F000EFD90F /* CGMetalOutput.m in Sources */,
 				969E8AFF277599F000EFD90F /* MTLMetalCompute.m in Sources */,
-				969E8D172775F0BD00EFD90F /* AePaintReSizeFilter.m in Sources */,
 				969E8B1C277599F000EFD90F /* CGMetalRawDataInput.metal in Sources */,
 				969E8B14277599F000EFD90F /* CGMetalTextureInput.m in Sources */,
 				969E8B59277599F000EFD90F /* CGMetalSoul.metal in Sources */,

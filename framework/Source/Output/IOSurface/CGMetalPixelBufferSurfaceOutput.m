@@ -190,7 +190,8 @@ static const NSUInteger MaxFramesInFlight = 3;
             (id) kCVPixelBufferHeightKey: @(height),
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
             (id) kCVPixelFormatOpenGLESCompatibility: @(YES),//神奇问题, PixelBufferPool里的pixelbuffer一直无法释放, 初步猜测是IOSurface复用除了问题, 把这个注释掉, 运行一次, 又打开就好了
-//            (id) kCVPixelBufferOpenGLESCompatibilityKey: @(YES),//和kCVPixelFormatOpenGLESCompatibility区别是啥#else
+//            (id) kCVPixelBufferOpenGLESCompatibilityKey: @(YES),//和kCVPixelFormatOpenGLESCompatibility区别是啥
+#else
 #endif
             (id)kCVPixelBufferPixelFormatTypeKey:@(YES),
             (id) kCVPixelBufferMetalCompatibilityKey: @(YES),
