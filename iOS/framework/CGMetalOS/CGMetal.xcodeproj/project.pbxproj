@@ -131,6 +131,10 @@
 		969E90A12780DD3700EFD90F /* CGMetalWobble.h in Headers */ = {isa = PBXBuildFile; fileRef = 969E909D2780DD3700EFD90F /* CGMetalWobble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		969E92E32783305300EFD90F /* CGMetalBlendScaleAlpha.h in Headers */ = {isa = PBXBuildFile; fileRef = 969E92E12783305300EFD90F /* CGMetalBlendScaleAlpha.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		969E92E42783305300EFD90F /* CGMetalBlendScaleAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 969E92E22783305300EFD90F /* CGMetalBlendScaleAlpha.m */; };
+		96AE231429B591A700E5B010 /* MetalMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE231029B591A700E5B010 /* MetalMatrix.m */; };
+		96AE231529B591A700E5B010 /* AAPLMathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 96AE231129B591A700E5B010 /* AAPLMathUtilities.h */; };
+		96AE231629B591A700E5B010 /* MetalMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 96AE231229B591A700E5B010 /* MetalMatrix.h */; };
+		96AE231729B591A700E5B010 /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE231329B591A700E5B010 /* AAPLMathUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -259,6 +263,10 @@
 		969E909D2780DD3700EFD90F /* CGMetalWobble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalWobble.h; sourceTree = "<group>"; };
 		969E92E12783305300EFD90F /* CGMetalBlendScaleAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMetalBlendScaleAlpha.h; sourceTree = "<group>"; };
 		969E92E22783305300EFD90F /* CGMetalBlendScaleAlpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMetalBlendScaleAlpha.m; sourceTree = "<group>"; };
+		96AE231029B591A700E5B010 /* MetalMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalMatrix.m; sourceTree = "<group>"; };
+		96AE231129B591A700E5B010 /* AAPLMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLMathUtilities.h; sourceTree = "<group>"; };
+		96AE231229B591A700E5B010 /* MetalMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalMatrix.h; sourceTree = "<group>"; };
+		96AE231329B591A700E5B010 /* AAPLMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLMathUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,6 +479,7 @@
 		969E8E01277D709300EFD90F /* Transform */ = {
 			isa = PBXGroup;
 			children = (
+				96AE230F29B591A700E5B010 /* Matrix */,
 				969E8D192775F10600EFD90F /* CGMetalCrop.h */,
 				969E8D1A2775F10600EFD90F /* CGMetalCrop.m */,
 				969E8ADB277599EF00EFD90F /* CGMetalFlipX.h */,
@@ -498,6 +507,17 @@
 				969E8E3B278002FB00EFD90F /* CGMetalZoom.metal */,
 			);
 			path = Transform;
+			sourceTree = "<group>";
+		};
+		96AE230F29B591A700E5B010 /* Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				96AE231129B591A700E5B010 /* AAPLMathUtilities.h */,
+				96AE231329B591A700E5B010 /* AAPLMathUtilities.m */,
+				96AE231229B591A700E5B010 /* MetalMatrix.h */,
+				96AE231029B591A700E5B010 /* MetalMatrix.m */,
+			);
+			path = Matrix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,6 +564,7 @@
 				969E8D1F2775F11800EFD90F /* CGMetalReSize.h in Headers */,
 				969E8DF3277D6FBA00EFD90F /* CGMetalZoom.h in Headers */,
 				969E8DFB277D703400EFD90F /* CGMetalRotate.h in Headers */,
+				96AE231629B591A700E5B010 /* MetalMatrix.h in Headers */,
 				969E8DB9277AA52D00EFD90F /* CGMetalQueueContext.h in Headers */,
 				969E8DF7277D6FDD00EFD90F /* CGMetalTranslation.h in Headers */,
 				969E8DFF277D705400EFD90F /* CGMetalProjection.h in Headers */,
@@ -556,6 +577,7 @@
 				969E8E3F2780152000EFD90F /* CGMetalGlitch.h in Headers */,
 				969E8E432780157200EFD90F /* CGMetalFlashWhite.h in Headers */,
 				969E90A12780DD3700EFD90F /* CGMetalWobble.h in Headers */,
+				96AE231529B591A700E5B010 /* AAPLMathUtilities.h in Headers */,
 				9615EB9A2847B3000031CFFC /* ICGMetalBasic.h in Headers */,
 				9615EB972847B2FA0031CFFC /* CGMetalTwoBasic.h in Headers */,
 				969E92E32783305300EFD90F /* CGMetalBlendScaleAlpha.h in Headers */,
@@ -641,6 +663,8 @@
 				969E8B19277599F000EFD90F /* CGMetalRawDataInput.m in Sources */,
 				969E8E4C2780222100EFD90F /* CGMetalGlitch.metal in Sources */,
 				969E8B08277599F000EFD90F /* CGMetalBufferProvider.m in Sources */,
+				96AE231729B591A700E5B010 /* AAPLMathUtilities.m in Sources */,
+				96AE231429B591A700E5B010 /* MetalMatrix.m in Sources */,
 				969E8B63277599F000EFD90F /* CGMetalColour.metal in Sources */,
 				969E909F2780DD3700EFD90F /* CGMetalWobble.m in Sources */,
 				969E8B7F277599F000EFD90F /* CGMetalNSViewOutput.m in Sources */,

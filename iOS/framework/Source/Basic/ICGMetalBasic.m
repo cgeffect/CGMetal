@@ -54,4 +54,8 @@
     samplerDescriptor.lodMaxClamp = FLT_MAX;
     return [[CGMetalDevice sharedDevice].device newSamplerStateWithDescriptor:samplerDescriptor];
 }
+
+- (CGSize)getRenderPassSize {
+    return CGSizeZero;
+}
 @end

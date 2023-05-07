@@ -12,10 +12,11 @@ vertex VertexOut kCGMetalRotate (
     uint vid [[ vertex_id ]],
     constant float4 *position [[ buffer(0) ]],
     const device float2 *texCoord [[ buffer(1) ]],
-    const device float4x4 *matrix [[ buffer(2) ]]
+    const device float4x4 &mpMatrix [[ buffer(2) ]]
+
     ) {
         VertexOut out;
-        out.position = *matrix * float4(position[vid]);
+        out.position = mpMatrix * float4(position[vid]);
         out.texCoordinate = texCoord[vid];
         return out;
 }

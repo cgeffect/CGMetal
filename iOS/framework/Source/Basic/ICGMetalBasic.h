@@ -71,6 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark getter
 - (float *)getVertices;
 - (float *)getTextureCoordinates;
+- (CGSize)getRenderPassSize;
 @end
 
 NS_ASSUME_NONNULL_END

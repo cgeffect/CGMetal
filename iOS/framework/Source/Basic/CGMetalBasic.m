@@ -81,8 +81,8 @@
 - (void)newTextureAvailable:(CGMetalTexture *)inTexture {
     _inTexture = inTexture;
     [self newTextureInput:_inTexture];
-    
-    id<MTLTexture> texture = [_outTexture newTexture:MTLPixelFormatRGBA8Unorm size:inTexture.textureSize usege:MTLTextureUsageShaderRead | MTLTextureUsageRenderTarget];
+    CGSize fboSize = [self getRenderPassSize];
+    id<MTLTexture> texture = [_outTexture newTexture:MTLPixelFormatRGBA8Unorm size:fboSize usege:MTLTextureUsageShaderRead | MTLTextureUsageRenderTarget];
 
     //set render target texture, MTLTexture can be reuse
     [_mtlRender setOutTexture:texture
@@ -237,6 +237,10 @@
 - (void)dealloc
 {
     
+}
+
+- (CGSize)getRenderPassSize {
+    return _inTexture.textureSize;
 }
 
 @end
