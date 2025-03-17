@@ -5,9 +5,9 @@
 //  Created by Jason on 2021/6/1.
 //
 
-#import "CGMetalPlayerInput.h"
+#import <CGMetalMac/CGMetalPlayerInput.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-#import "CGMetalRawDataInput.h"
+#import <CGMetalMac/CGMetalRawDataInput.h>
 
 # define ONE_FRAME_DURATION 0.03
 # define LUMA_SLIDER_TAG 0

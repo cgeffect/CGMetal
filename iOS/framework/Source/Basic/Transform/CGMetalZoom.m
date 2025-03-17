@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/12/30.
 //
 
-#import "CGMetalZoom.h"
+#import <CGMetal/CGMetalZoom.h>
 #define zoomVertex @"zoomVertex"
 
 @implementation CGMetalZoom

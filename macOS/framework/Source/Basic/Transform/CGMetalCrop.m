@@ -5,7 +5,7 @@
 //  Created by Jason on 2022/1/2.
 //
 
-#import "CGMetalCrop.h"
+#import <CGMetalMac/CGMetalCrop.h>
 #define kCGMetalScaleAlphaFragmentShader @"kCGMetalScaleAlphaFragmentShader"
 
 @implementation CGMetalCrop

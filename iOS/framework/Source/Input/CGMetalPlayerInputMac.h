@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/12/7.
 //
 
-#import "CGMetalOutput.h"
+#import <CGMetal/CGMetalOutput.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 #else
 

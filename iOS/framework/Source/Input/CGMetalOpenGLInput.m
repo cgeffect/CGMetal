@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/12/27.
 //
 
-#import "CGMetalOpenGLInput.h"
+#import <CGMetal/CGMetalOpenGLInput.h>
 
 @implementation CGMetalOpenGLInput
 

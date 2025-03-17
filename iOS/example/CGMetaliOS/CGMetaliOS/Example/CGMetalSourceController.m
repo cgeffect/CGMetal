@@ -26,7 +26,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     self.navigationItem.title = @"CGMetal";
 
-    _inputList = @[@"camera input",
+    _inputList = @[/*@"camera input",*/
                    @"data input",
                    @"image input",
                    @"pixel input",
@@ -34,7 +34,7 @@
                    @"video encode",
                    @"video decode",
                    @"effect",
-                   @"mutil"];
+                   /*@"mutil"*/];
 }
 
 #pragma mark - Table view data source

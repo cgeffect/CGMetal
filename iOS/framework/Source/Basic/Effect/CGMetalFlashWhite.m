@@ -6,7 +6,7 @@
 //  Copyright © 2022 com.metal.Jason. All rights reserved.
 //
 
-#import "CGMetalFlashWhite.h"
+#import <CGMetal/CGMetalFlashWhite.h>
 
 #define kCGMetalFlashFragment @"kCGMetalFlashFragment"
 

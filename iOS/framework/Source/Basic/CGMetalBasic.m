@@ -6,7 +6,7 @@
 //  Copyright © 2021 CGMetal. All rights reserved.
 //
 
-#import "CGMetalBasic.h"
+#import <CGMetal/CGMetalBasic.h>
 
 #define VertexShader @"CGMetalVertexShader"
 #define FragmentShader @"CGMetalFragmentShader"

@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/6/1.
 //
 
-#import "CGMetalOutput.h"
+#import <CGMetal/CGMetalOutput.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

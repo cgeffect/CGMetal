@@ -5,8 +5,8 @@
 //  Created by Jason on 2021/12/23.
 //
 
-#import "CGMetalCameraInput.h"
-#import "CGMetalPixelBufferInput.h"
+#import <CGMetal/CGMetalCameraInput.h>
+#import <CGMetal/CGMetalPixelBufferInput.h>
 
 API_AVAILABLE(ios(10.0))
 @interface CGMetalCameraInput ()<AVCaptureAudioDataOutputSampleBufferDelegate,AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate>
@@ -143,7 +143,7 @@ API_AVAILABLE(ios(10.0))
 }
 
 - (void)takePhoto {
-    NSDictionary *setDic = @{AVVideoCodecKey:AVVideoCodecJPEG};
+    NSDictionary *setDic = @{AVVideoCodecKey:AVVideoCodecTypeJPEG};
     AVCapturePhotoSettings* setting = [AVCapturePhotoSettings photoSettingsWithFormat:setDic];
     [self.photoOutput capturePhotoWithSettings:setting delegate:self];
 }

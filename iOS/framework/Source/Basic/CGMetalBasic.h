@@ -6,7 +6,7 @@
 //  Copyright © 2021 CGMetal. All rights reserved.
 //
 
-#import "ICGMetalBasic.h"
+#import <CGMetal/ICGMetalBasic.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

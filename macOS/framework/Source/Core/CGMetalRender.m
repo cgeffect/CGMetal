@@ -5,8 +5,8 @@
 //  Created by Jason on 21/3/1.
 //
 
-#import "CGMetalRender.h"
-#import "CGMetalDevice.h"
+#import <CGMetalMac/CGMetalRender.h>
+#import <CGMetalMac/CGMetalDevice.h>
 
 @implementation CGMetalRender {
     MTLRenderPassDescriptor *_renderPassDescriptor;
@@ -33,7 +33,7 @@
         MTLRenderPipelineDescriptor *pipelineDescriptor = [MTLRenderPipelineDescriptor new];
         pipelineDescriptor.label = @"Offscreen Render Pipeline";
         pipelineDescriptor.rasterSampleCount = 1;
-        pipelineDescriptor.sampleCount = 1;
+        pipelineDescriptor.rasterSampleCount = 1;
         pipelineDescriptor.vertexFunction = vertexFunc;
         pipelineDescriptor.fragmentFunction = fragmentFunc;
 //        MTLVertexDescriptor *vertexDescriptor = [MTLVertexDescriptor vertexDescriptor];

@@ -8,7 +8,23 @@
 
 #include <metal_stdlib>
 using namespace metal;
-#include "../CGMetalHeader.h"
+//#include "../CGMetalHeader.h"
+//#include <metal_stdlib>
+typedef struct
+{
+    float4 position [[position]];
+    float2 texCoordinate;
+
+} VertexOut;
+//线性插值, 抗锯齿, nearest会出现锯齿
+constexpr sampler texSampler(
+                             filter::linear,
+                             mag_filter::linear,
+                             min_filter::linear,
+                             coord::normalized,
+                             address::clamp_to_edge
+//                             address::clamp_to_zero
+                             );
 
 constant int smooth = 1000;
 fragment float4 kCGMetakFlashFragment(

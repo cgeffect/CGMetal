@@ -5,7 +5,7 @@
 //  Created by Jason on 2022/1/3.
 //
 
-#import "CGMetalBlendScaleAlpha.h"
+#import <CGMetal/CGMetalBlendScaleAlpha.h>
 
 #define kCGMetalBlendScaleLeftAlphaFragmentShader @"kCGMetalBlendScaleLeftAlphaFragmentShader"
 

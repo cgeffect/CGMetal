@@ -5,7 +5,7 @@
 //  Created by Jason on 21/3/3.
 //
 
-#import "CGMetalOutput.h"
+#import <CGMetal/CGMetalOutput.h>
 
 @implementation CGMetalOutput
 

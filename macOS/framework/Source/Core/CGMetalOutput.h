@@ -5,11 +5,11 @@
 //  Created by Jason on 21/3/3.
 //
 
-#import "CGMetalDevice.h"
-#import "CGMetalInput.h"
+#import <CGMetalMac/CGMetalDevice.h>
+#import <CGMetalMac/CGMetalInput.h>
 #import <simd/simd.h>
 
-@import Metal;
+#import <Metal/Metal.h>
 
 //顶点坐标
 static const float _vertices[] = {

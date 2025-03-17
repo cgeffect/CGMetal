@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/6/14.
 //
 
-#import "CGMetalPixelBufferOutput.h"
+#import <CGMetal/CGMetalPixelBufferOutput.h>
 
 @implementation CGMetalPixelBufferOutput
 {

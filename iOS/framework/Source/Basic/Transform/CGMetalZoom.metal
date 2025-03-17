@@ -9,7 +9,12 @@
 #include <metal_stdlib>
 using namespace metal;
 #include "../CGMetalHeader.h"
+typedef struct
+{
+    float4 position [[position]];
+    float2 texCoordinate;
 
+} VertexOut;
 vertex VertexOut zoomVertex(
     uint vid [[ vertex_id ]],
     constant float4 *position [[ buffer(0) ]],

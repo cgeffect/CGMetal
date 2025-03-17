@@ -17,50 +17,67 @@ FOUNDATION_EXPORT const unsigned char CGMetalVersionString[];
 
 #pragma mark -
 #pragma mark Basic
-#import "CGMetalBasic.h"
-#import "CGMetalTwoBasic.h"
-#import "CGMetalShake.h"
-#import "CGMetalFlipX.h"
-#import "CGMetalFlipY.h"
-#import "CGMetalSoul.h"
-#import "CGMetalColour.h"
-#import "CGMetalGray.h"
-#import "CGMetalBlendAlpha.h"
-#import "CGMetalGlitch.h"
-#import "CGMetalFlashWhite.h"
-#import "CGMetalRotate.h"
-#import "CGMetalTranslation.h"
-#import "CGMetalZoom.h"
-#import "CGMetalProjection.h"
-#import "CGMetalWobble.h"
-#import "CGMetalBlendScaleAlpha.h"
-#import "CGMetalBlendAlpha.h"
+#import <CGMetal/CGMetalBasic.h>
+#import <CGMetal/CGMetalTwoBasic.h>
+#import <CGMetal/CGMetalShake.h>
+#import <CGMetal/CGMetalFlipX.h>
+#import <CGMetal/CGMetalFlipY.h>
+#import <CGMetal/CGMetalSoul.h>
+#import <CGMetal/CGMetalColour.h>
+#import <CGMetal/CGMetalGray.h>
+#import <CGMetal/CGMetalBlendAlpha.h>
+#import <CGMetal/CGMetalGlitch.h>
+#import <CGMetal/CGMetalFlashWhite.h>
+#import <CGMetal/CGMetalRotate.h>
+#import <CGMetal/CGMetalTranslation.h>
+#import <CGMetal/CGMetalZoom.h>
+#import <CGMetal/CGMetalProjection.h>
+#import <CGMetal/CGMetalWobble.h>
+#import <CGMetal/CGMetalBlendScaleAlpha.h>
+#import <CGMetal/CGMetalBlendAlpha.h>
 
 #pragma mark -
 #pragma mark Input
-#import "CGMetalPixelBufferInput.h"
-#import "CGMetalVideoInput.h"
-#import "CGMetalRawDataInput.h"
-#import "CGMetalCameraInput.h"
+#import <CGMetal/CGMetalPixelBufferInput.h>
+#import <CGMetal/CGMetalVideoInput.h>
+#import <CGMetal/CGMetalRawDataInput.h>
+#import <CGMetal/CGMetalCameraInput.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-#import "CGMetalImageInput.h"
-#import "CGMetalPlayerInput.h"
+#import <CGMetal/CGMetalImageInput.h>
+#import <CGMetal/CGMetalPlayerInput.h>
 #else
-#import "CGMetalPlayerInputMac.h"
+#import <CGMetal/CGMetalPlayerInputMac.h>
 #endif
 
 #pragma mark -
 #pragma mark Output
-#import "CGMetalRawDataOutput.h"
-#import "CGMetalPixelBufferOutput.h"
-#import "CGMetalVideoOutput.h"
-#import "CGMetalPixelBufferSurfaceOutput.h"
-#import "CGMetalLayerOutput.h"
-#import "CGMetalTextureOutput.h"
+#import <CGMetal/CGMetalRawDataOutput.h>
+#import <CGMetal/CGMetalPixelBufferOutput.h>
+#import <CGMetal/CGMetalVideoOutput.h>
+#import <CGMetal/CGMetalPixelBufferSurfaceOutput.h>
+#import <CGMetal/CGMetalLayerOutput.h>
+#import <CGMetal/CGMetalTextureOutput.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-#import "CGMetalUIViewOutput.h"
-#import "CGMetalImageOutput.h"
+#import <CGMetal/CGMetalUIViewOutput.h>
+#import <CGMetal/CGMetalImageOutput.h>
 #else
-#import "CGMetalNSViewOutput.h"
+#import <CGMetal/CGMetalNSViewOutput.h>
 #endif
+
+#import <CGMetal/CGMetalBlit.h>
+#import <CGMetal/CGMetalBufferProvider.h>
+#import <CGMetal/CGMetalContext.h>
+#import <CGMetal/CGMetalCrop.h>
+#import <CGMetal/CGMetalHeader.h>
+#import <CGMetal/CGMetalHeader.h>
+#import <CGMetal/CGMetalNSViewOutput.h>
+#import <CGMetal/CGMetalOpenGLInput.h>
+#import <CGMetal/CGMetalOpenGLOutput.h>
+#import <CGMetal/CGMetalPlayerInputMac.h>
+#import <CGMetal/CGMetalQueueContext.h>
+#import <CGMetal/CGMetalReSize.h>
+#import <CGMetal/CGMetalSourfaceTexture.h>
+#import <CGMetal/CGMetalTextureInput.h>
+#import <CGMetal/MTLMetalCompute.h>
+//#import <CGMetal/CGMetalNSViewOutput.h>
 

@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/12/28.
 //
 
-#import "CGMetalQueueContext.h"
+#import <CGMetal/CGMetalQueueContext.h>
 #include <pthread.h>
 
 @implementation CGMetalQueueContext

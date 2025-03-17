@@ -5,9 +5,9 @@
 //  Created by Jason on 2021/12/27.
 //
 
-#import "CGMetalContext.h"
+#import <CGMetalMac/CGMetalContext.h>
 #import <mach/mach.h>
-#import "CGMetalDevice.h"
+#import <CGMetalMac/CGMetalDevice.h>
 #pragma mark -
 #pragma mark 队列
 

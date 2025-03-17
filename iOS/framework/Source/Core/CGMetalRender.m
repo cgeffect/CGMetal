@@ -5,8 +5,8 @@
 //  Created by Jason on 21/3/1.
 //
 
-#import "CGMetalRender.h"
-#import "CGMetalDevice.h"
+#import <CGMetal/CGMetalRender.h>
+#import <CGMetal/CGMetalDevice.h>
 
 @implementation CGMetalRender {
     MTLRenderPassDescriptor *_renderPassDescriptor;

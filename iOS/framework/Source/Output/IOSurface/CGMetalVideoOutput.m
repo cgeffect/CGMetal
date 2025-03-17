@@ -5,8 +5,8 @@
 //  Created by Jason on 2021/12/1.
 //
 
-#import "CGMetalVideoOutput.h"
-#import "CGMetalPixelBufferSurfaceOutput.h"
+#import <CGMetal/CGMetalVideoOutput.h>
+#import <CGMetal/CGMetalPixelBufferSurfaceOutput.h>
 
 @interface CGMetalVideoOutput ()<CGVideoEncoderDelegate, CGMetalRenderOutputDelegate>
 {
@@ -90,9 +90,10 @@
 
 @end
 
-@import VideoToolbox;
-@import AVFoundation;
-
+//@import VideoToolbox;
+//@import AVFoundation;
+#import <AVFoundation/AVFoundation.h>
+#import <VideoToolbox/VideoToolbox.h>
 typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
     CGMetelEncodeStatusNone = 0,
     CGMetelEncodeStatusStopped = 1,

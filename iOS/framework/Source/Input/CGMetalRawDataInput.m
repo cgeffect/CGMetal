@@ -5,8 +5,8 @@
 //  Created by Jason on 2021/6/1.
 //
 
-#import "CGMetalRawDataInput.h"
-#import "CGMetalRender.h"
+#import <CGMetal/CGMetalRawDataInput.h>
+#import <CGMetal/CGMetalRender.h>
 
 #define VertexShader       @"CGMetalRawVertexShader"
 #define FragmentShaderNV12 @"CGMetalRawNV12FragmentShader"

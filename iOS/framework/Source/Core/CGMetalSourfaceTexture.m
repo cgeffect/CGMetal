@@ -5,9 +5,9 @@
 //  Created by Jason on 2021/11/30.
 //
 
-#import "CGMetalSourfaceTexture.h"
-#import "CGMetalDevice.h"
-@import CoreVideo;
+#import <CGMetal/CGMetalSourfaceTexture.h>
+#import <CGMetal/CGMetalDevice.h>
+#import <CoreVideo/CoreVideo.h>
 
 @interface CGMetalSourfaceTexture ()
 {

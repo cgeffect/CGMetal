@@ -6,8 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@import Metal;
-@import CoreGraphics;
+#import <Metal/Metal.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

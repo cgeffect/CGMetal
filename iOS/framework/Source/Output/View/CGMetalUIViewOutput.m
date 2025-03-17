@@ -5,12 +5,12 @@
 //  Created by Jason on 21/3/3.
 //
 
-#import "CGMetalUIViewOutput.h"
+#import <CGMetal/CGMetalUIViewOutput.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-#import "CGMetalOutput.h"
-#import "CGMetalRender.h"
-#import "CGMetalDevice.h"
-@import Metal;
+#import <CGMetal/CGMetalOutput.h>
+#import <CGMetal/CGMetalRender.h>
+#import <CGMetal/CGMetalDevice.h>
+#import <Metal/Metal.h>
 
 #define VertexShader @"CGRenderVertexShader"
 #define FragmentShader @"CGRenderFragmentShader"

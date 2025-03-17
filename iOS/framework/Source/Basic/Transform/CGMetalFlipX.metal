@@ -7,6 +7,12 @@
 
 #include "../CGMetalHeader.h"
 
+typedef struct
+{
+    float4 position [[position]];
+    float2 texCoordinate;
+
+} VertexOut;
 vertex VertexOut kCGMetalFlipXVertexShader(
                       uint vertexID [[ vertex_id ]],
                       constant float4 *position [[ buffer(0) ]],

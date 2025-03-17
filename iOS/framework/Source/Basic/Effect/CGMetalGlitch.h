@@ -6,7 +6,7 @@
 //  Copyright © 2022 com.metal.Jason. All rights reserved.
 //
 
-#import "CGMetalBasic.h"
+#import <CGMetal/CGMetalBasic.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

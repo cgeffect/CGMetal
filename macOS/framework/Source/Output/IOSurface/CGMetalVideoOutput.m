@@ -5,8 +5,8 @@
 //  Created by Jason on 2021/12/1.
 //
 
-#import "CGMetalVideoOutput.h"
-#import "CGMetalPixelBufferSurfaceOutput.h"
+#import <CGMetalMac/CGMetalVideoOutput.h>
+#import <CGMetalMac/CGMetalPixelBufferSurfaceOutput.h>
 
 @interface CGMetalVideoOutput ()<CGVideoEncoderDelegate, CGMetalRenderOutputDelegate>
 {

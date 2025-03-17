@@ -7,8 +7,8 @@
 //
 
 
-#import "CGMetalImageInput.h"
-#import "CGMetalTexture.h"
+#import <CGMetal/CGMetalImageInput.h>
+#import <CGMetal/CGMetalTexture.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 
 @interface CGMetalImageInput ()

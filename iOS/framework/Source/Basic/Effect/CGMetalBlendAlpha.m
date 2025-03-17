@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/11/19.
 //
 
-#import "CGMetalBlendAlpha.h"
+#import <CGMetal/CGMetalBlendAlpha.h>
 
 #define kCGMetalAlphaFragmentShader @"kCGMetalAlphaFragmentShader"
 

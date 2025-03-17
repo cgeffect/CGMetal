@@ -6,7 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@import Metal;
+#import <Metal/Metal.h>
+//#import <Metal/Metal.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -6,9 +6,9 @@
 //  Copyright © 2021 com.metal.Jason. All rights reserved.
 //
 
-#import "CGMetalRotate.h"
-#import "MetalMatrix.h"
-#import "AAPLMathUtilities.h"
+#import <CGMetal/CGMetalRotate.h>
+#import <CGMetal/MetalMatrix.h>
+#import <CGMetal/AAPLMathUtilities.h>
 
 #define kCGMetalRotate @"kCGMetalRotate"
 

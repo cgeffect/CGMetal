@@ -6,8 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGMetalOutputter.h"
-@import CoreVideo;
+#import <CGMetal/CGMetalOutputter.h>
+#import <CoreVideo/CoreVideo.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

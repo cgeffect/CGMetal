@@ -5,12 +5,12 @@
 //  Created by Jason on 21/3/3.
 //
 
-#import "CGMetalUIViewOutput.h"
+#import <CGMetalMac/CGMetalUIViewOutput.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-#import "CGMetalOutput.h"
-#import "CGMetalRender.h"
-#import "CGMetalDevice.h"
-@import Metal;
+#import <CGMetalMac/CGMetalOutput.h>
+#import <CGMetalMac/CGMetalRender.h>
+#import <CGMetalMac/CGMetalDevice.h>
+#import <Metal/Metal.h>
 
 #define VertexShader @"CGRenderVertexShader"
 #define FragmentShader @"CGRenderFragmentShader"
@@ -96,10 +96,10 @@
     id<CAMetalDrawable> currentDrawable = [_metalLayer nextDrawable];
     [_mtlRender setOutTexture:currentDrawable.texture index:0];
     id<MTLCommandBuffer> commandBuffer = [_commandQueue commandBuffer];
-    commandBuffer.label = @"CGMetalView Command Buffer";
+    commandBuffer.label = @<CGMetalMac/CGMetalView Command Buffer";
     
     id<MTLRenderCommandEncoder> encoder = [commandBuffer renderCommandEncoderWithDescriptor: _mtlRender.renderTargetDescriptor];
-    encoder.label = @"CGMetalView Command Encoder";
+    encoder.label = @<CGMetalMac/CGMetalView Command Encoder";
     
     CGRect viewPort = [self glPrepareViewport:width height:height];
     int x = (int) viewPort.origin.x;

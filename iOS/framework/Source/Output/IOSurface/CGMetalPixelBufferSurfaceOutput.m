@@ -5,10 +5,10 @@
 //  Created by Jason on 2021/11/30.
 //
 
-#import "CGMetalPixelBufferSurfaceOutput.h"
-#import "CGMetalDevice.h"
-#import "CGMetalOutput.h"
-#import "CGMetalRender.h"
+#import <CGMetal/CGMetalPixelBufferSurfaceOutput.h>
+#import <CGMetal/CGMetalDevice.h>
+#import <CGMetal/CGMetalOutput.h>
+#import <CGMetal/CGMetalRender.h>
 
 #define VertexShader @"CGMetalPixelBufferSurfaceOutputVertexShader"
 #define FragmentShader @"CGMetalPixelBufferSurfaceOutputFragmentShader"

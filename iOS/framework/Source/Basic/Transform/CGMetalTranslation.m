@@ -5,7 +5,9 @@
 //  Created by Jason on 2021/12/30.
 //
 
-#import "CGMetalTranslation.h"
+#import <CGMetal/CGMetalTranslation.h>
+#import <simd/simd.h>
+
 #define kCGMetalTranslation @"kCGMetalTranslation"
 
 @implementation CGMetalTranslation

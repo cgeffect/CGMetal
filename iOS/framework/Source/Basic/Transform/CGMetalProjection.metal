@@ -6,7 +6,14 @@
 //
 
 #include "../CGMetalHeader.h"
+#include <metal_stdlib>
+using namespace metal;
+typedef struct
+{
+    float4 position [[position]];
+    float2 texCoordinate;
 
+} VertexOut;
 vertex VertexOut kCGMetalProjection (
     uint vid [[ vertex_id ]],
     constant float4 *position [[ buffer(0) ]],

@@ -6,11 +6,12 @@
 //  Copyright © 2021 CGMetal. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 
-@import UIKit;
-#import "CGMetalOutput.h"
+//@import UIKit;
+#import <UIKit/UIKit.h>
+#import <CGMetal/CGMetalOutput.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -5,7 +5,7 @@
 //  Created by Jason on 2022/1/2.
 //
 
-#import "CGMetalWobble.h"
+#import <CGMetal/CGMetalWobble.h>
 
 #define WobbleVertex @"WobbleVertex"
 @implementation CGMetalWobble

@@ -5,7 +5,7 @@
 //  Created by Jason on 2022/1/3.
 //
 
-#import "CGMetalBasic.h"
+#import <CGMetalMac/CGMetalBasic.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

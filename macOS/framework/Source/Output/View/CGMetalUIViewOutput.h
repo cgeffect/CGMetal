@@ -6,10 +6,10 @@
 //
 
 
-#import "CGMetalInput.h"
+#import <CGMetalMac/CGMetalInput.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-#import "CGMetalLayerOutput.h"
-@import UIKit;
+#import <CGMetalMac/CGMetalLayerOutput.h>
+#import <UIKit/UIKit.h>
 
 @interface CGMetalUIViewOutput : UIView<CGMetalInput, CGMetalViewOutput>
 

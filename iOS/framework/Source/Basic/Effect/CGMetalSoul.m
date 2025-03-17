@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/6/19.
 //
 
-#import "CGMetalSoul.h"
+#import <CGMetal/CGMetalSoul.h>
 
 #define kCGMetalSoulFragmentShader @"kCGMetalSoulFragmentShader"
 

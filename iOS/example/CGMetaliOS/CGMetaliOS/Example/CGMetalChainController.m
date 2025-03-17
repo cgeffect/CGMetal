@@ -8,7 +8,7 @@
 
 #import "CGMetalChainController.h"
 #ifdef SOURCE_COMPILE
-#import "CGMetal.h"
+#import <CGMetal/CGMetal.h>
 #else
 #import <CGMetal/CGMetal.h>
 #endif

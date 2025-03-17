@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/6/17.
 //
 
-#import "CGMetalFlipY.h"
+#import <CGMetal/CGMetalFlipY.h>
 
 #define kCGMetalFlipYVertexShader @"kCGMetalFlipYVertexShader"
 

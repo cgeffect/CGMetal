@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGMetalOutput.h"
+#import <CGMetalMac/CGMetalOutput.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

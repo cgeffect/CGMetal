@@ -5,11 +5,11 @@
 //  Created by Jason on 2021/6/1.
 //
 
-#import "CGMetalOutput.h"
+#import <CGMetalMac/CGMetalOutput.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 
 #import <AVFoundation/AVFoundation.h>
-#import "CGMetalPixelBufferInput.h"
+#import <CGMetalMac/CGMetalPixelBufferInput.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

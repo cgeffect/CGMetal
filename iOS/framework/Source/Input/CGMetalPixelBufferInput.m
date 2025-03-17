@@ -5,9 +5,9 @@
 //  Created by Jason on 2021/6/1.
 //
 
-#import "CGMetalPixelBufferInput.h"
-#import "CGMetalDevice.h"
-#import "CGMetalRender.h"
+#import <CGMetal/CGMetalPixelBufferInput.h>
+#import <CGMetal/CGMetalDevice.h>
+#import <CGMetal/CGMetalRender.h>
 
 #define VertexShader @"kCGMetalPixNV12VertexShader"
 #define FragmentShader @"kCGMetalPixNV12FragmentShader"

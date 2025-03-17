@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-@import Metal;
+#import <Metal/Metal.h>
 
 #import <simd/simd.h>
-#import "CGMetalInput.h"
-#import "CGMetalOutput.h"
-#import "CGMetalRender.h"
+#import <CGMetal/CGMetalInput.h>
+#import <CGMetal/CGMetalOutput.h>
+#import <CGMetal/CGMetalRender.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

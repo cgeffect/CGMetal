@@ -5,10 +5,10 @@
 //  Created by Jason on 21/3/3.
 //
 
-@import Foundation;
-@import CoreMedia;
-@import Metal;
-
+#import <Foundation/Foundation.h>
+#import <CoreMedia/CoreMedia.h>
+#import <Metal/Metal.h>
+#import <Foundation/Foundation.h>
 @class CGMetalDevice;
 @interface CGMetalDevice : NSObject
 

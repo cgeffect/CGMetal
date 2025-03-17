@@ -6,8 +6,8 @@
 //  Copyright © 2021 CGMetal. All rights reserved.
 //
 
-@import Foundation;
-#import "CGMetalTexture.h"
+#import <Foundation/Foundation.h>
+#import <CGMetalMac/CGMetalTexture.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

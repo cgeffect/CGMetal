@@ -6,7 +6,7 @@
 //  Copyright © 2022 com.metal.Jason. All rights reserved.
 //
 
-#import "CGMetalGlitch.h"
+#import <CGMetal/CGMetalGlitch.h>
 
 #define kCGMetalGlitchFragmentShader @"kCGMetalGlitchFragmentShader"
 

@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/6/3.
 //
 
-#import "CGMetalTextureInput.h"
+#import <CGMetal/CGMetalTextureInput.h>
 
 @implementation CGMetalTextureInput
 

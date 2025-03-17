@@ -5,9 +5,10 @@
 //  Created by Jason on 2021/5/27.
 //
 
-#import "CGMetalTexture.h"
+#import <CGMetal/CGMetalTexture.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-@import UIKit;
+//@import UIKit;
+#import <UIKit/UIKit.h>
 #else
 #endif
 

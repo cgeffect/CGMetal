@@ -5,11 +5,11 @@
 //  Created by Jason on 2021/12/3.
 //
 
-#import "CGMetalLayerOutput.h"
-#import "CGMetalOutput.h"
-#import "CGMetalRender.h"
-#import "CGMetalDevice.h"
-@import Metal;
+#import <CGMetal/CGMetalLayerOutput.h>
+#import <CGMetal/CGMetalOutput.h>
+#import <CGMetal/CGMetalRender.h>
+#import <CGMetal/CGMetalDevice.h>
+#import <Metal/Metal.h>
 
 #define VertexShader @"CGRenderVertexShader"
 #define FragmentShader @"CGRenderFragmentShader"

@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/6/14.
 //
 
-#import "CGMetalTextureOutput.h"
+#import <CGMetal/CGMetalTextureOutput.h>
 
 @implementation CGMetalTextureOutput
 

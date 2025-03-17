@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/5/29.
 //
 
-#import "CGMetalBlit.h"
+#import <CGMetal/CGMetalBlit.h>
 
 @interface CGMetalBlit ()
 {

@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/12/23.
 //
 
-#import "CGMetalOutput.h"
+#import <CGMetal/CGMetalOutput.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
 NS_ASSUME_NONNULL_BEGIN

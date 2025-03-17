@@ -6,7 +6,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "CGMetalInput.h"
+#import <CGMetal/CGMetalInput.h>
 
 NS_ASSUME_NONNULL_BEGIN
 @interface CGMetalLayerOutput : CAMetalLayer<CGMetalInput, CGMetalViewOutput>

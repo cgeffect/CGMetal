@@ -5,9 +5,8 @@
 //  Created by Jason on 2021/12/28.
 //
 
-#import "CGMetalTwoBasic.h"
-@import CoreGraphics;
-
+#import <CGMetalMac/CGMetalTwoBasic.h>
+#import <CoreGraphics/CoreGraphics.h>
 #define VertexShader @"CGMetalVertexShader"
 #define FragmentShader @"CGMetalFragmentTwoShader"
 

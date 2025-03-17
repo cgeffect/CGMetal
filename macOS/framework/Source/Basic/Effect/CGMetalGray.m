@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/10/21.
 //
 
-#import "CGMetalGray.h"
+#import <CGMetalMac/CGMetalGray.h>
 
 #define kCGMetalGrayFragmentShader @"kCGMetalGrayFragmentShader"
 

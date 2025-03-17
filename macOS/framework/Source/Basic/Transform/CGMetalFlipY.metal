@@ -5,7 +5,16 @@
 //  Created by Jason on 2021/6/17.
 //
 
-#include "../CGMetalHeader.h"
+#include <metal_stdlib>
+using namespace metal;
+
+//结构体(用于顶点函数输出/片元函数输入)
+typedef struct
+{
+    float4 position [[position]];
+    float2 texCoordinate;
+
+} VertexOut;
 
 vertex VertexOut kCGMetalFlipYVertexShader(
                       uint vertexID [[ vertex_id ]],

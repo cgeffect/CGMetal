@@ -6,7 +6,7 @@
 //  Copyright © 2021 com.metal.Jason. All rights reserved.
 //
 
-#import "CGMetalProjection.h"
+#import <CGMetalMac/CGMetalProjection.h>
 
 #define kCGMetalProjection @"kCGMetalProjection"
 

@@ -5,9 +5,9 @@
 //  Created by Jason on 2021/6/18.
 //
 
-#import "CGMetalBufferProvider.h"
+#import <CGMetal/CGMetalBufferProvider.h>
 
-@import Metal;
+#import <Metal/Metal.h>
 
 @interface CGMetalBufferProvider ()
 // 1

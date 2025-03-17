@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/6/4.
 //
 
-#import "CGMetalShake.h"
+#import <CGMetal/CGMetalShake.h>
 
 #define kCGMetalShakeFragmentShader1 @"kCGMetalShakeFragmentShader1"
 #define kCGMetalShakeFragmentShader @"kCGMetalShakeFragmentShader"

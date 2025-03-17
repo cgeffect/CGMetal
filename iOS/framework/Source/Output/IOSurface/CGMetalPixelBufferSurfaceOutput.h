@@ -5,8 +5,9 @@
 //  Created by Jason on 2021/11/30.
 //
 
-#import "CGMetalInput.h"
-@import CoreVideo;
+#import <CGMetal/CGMetalInput.h>
+//#import <CoreVideo/CoreVideo.h>
+#import <CoreVideo/CoreVideo.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -5,8 +5,8 @@
 //  Created by Jason on 21/3/1.
 //
 
-@import Foundation;
-@import Metal;
+#import <Foundation/Foundation.h>
+#import <Metal/Metal.h>
 
 @interface CGMetalRender : NSObject
 

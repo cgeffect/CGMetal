@@ -5,8 +5,8 @@
 //  Created by Jason on 2021/12/1.
 //
 
-#import "CGMetalVideoInput.h"
-#import "CGMetalPixelBufferInput.h"
+#import <CGMetalMac/CGMetalVideoInput.h>
+#import <CGMetalMac/CGMetalPixelBufferInput.h>
 
 @implementation CGMetalVideoInfo
 

@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/6/14.
 //
 
-#import "CGMetalImageOutput.h"
+#import <CGMetal/CGMetalImageOutput.h>
 CGColorSpaceRef CGColorSpaceGetDeviceRGB(void) {
     static CGColorSpaceRef space;
     static dispatch_once_t onceToken;

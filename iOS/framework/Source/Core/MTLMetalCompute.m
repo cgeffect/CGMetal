@@ -5,8 +5,8 @@
 //  Created by Jason on 2021/12/11.
 //
 
-#import "MTLMetalCompute.h"
-#import "CGMetalDevice.h"
+#import <CGMetal/MTLMetalCompute.h>
+#import <CGMetal/CGMetalDevice.h>
 
 @implementation MTLMetalCompute
 {

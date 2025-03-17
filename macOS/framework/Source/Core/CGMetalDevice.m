@@ -5,7 +5,7 @@
 //  Created by Jason on 21/3/3.
 //
 
-#import "CGMetalDevice.h"
+#import <CGMetalMac/CGMetalDevice.h>
 @import MetalPerformanceShaders;
 
 @interface CGMetalDevice()

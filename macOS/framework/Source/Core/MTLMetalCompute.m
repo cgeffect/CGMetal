@@ -6,7 +6,7 @@
 //
 
 #import "MTLMetalCompute.h"
-#import "CGMetalDevice.h"
+#import <CGMetalMac/CGMetalDevice.h>
 
 @implementation MTLMetalCompute
 {

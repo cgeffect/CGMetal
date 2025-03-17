@@ -5,8 +5,8 @@
 //  Created by Jason on 2021/12/7.
 //
 
-#import "CGMetalPlayerInputMac.h"
-#import "CGMetalPixelBufferInput.h"
+#import <CGMetal/CGMetalPlayerInputMac.h>
+#import <CGMetal/CGMetalPixelBufferInput.h>
 
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 #else

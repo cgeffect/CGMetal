@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/12/4.
 //
 
-#import "CGMetalLayerOutput.h"
+#import <CGMetalMac/CGMetalLayerOutput.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 #else
 #import <Cocoa/Cocoa.h>

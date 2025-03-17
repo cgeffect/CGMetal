@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/6/14.
 //
 
-#import "CGMetalRawDataOutput.h"
+#import <CGMetal/CGMetalRawDataOutput.h>
 
 @implementation CGMetalRawDataOutput
 {

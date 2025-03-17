@@ -6,7 +6,7 @@
 //  Copyright © 2022 com.metal.Jason. All rights reserved.
 //
 
-#import "ICGMetalBasic.h"
+#import <CGMetal/ICGMetalBasic.h>
 
 @implementation ICGMetalBasic
 
@@ -58,4 +58,55 @@
 - (CGSize)getRenderPassSize {
     return CGSizeZero;
 }
+//- (nonnull instancetype)initWithVertexShader:(nonnull NSString *)vertexShader {
+//}
+//
+//- (nonnull instancetype)initWithVertexShader:(nonnull NSString *)vertexShader fragmentShader:(nonnull NSString *)fragmentShader {
+//}
+
+- (void)notifyNextTargetsAboutNewTexture:(nonnull CGMetalTexture *)outTexture {
+}
+
+- (void)renderToTextureWithVertices:(nonnull const float *)vertices textureCoordinates:(nonnull const float *)textureCoordinates {
+}
+
+- (void)setFragmentTexture:(nonnull id<MTLTexture>)texture index:(int)index {
+}
+
+- (void)setFragmentValue1:(simd_float1)value index:(int)index {
+}
+
+- (void)setFragmentValue2:(simd_float2)value index:(int)index {
+}
+
+- (void)setFragmentValue3:(simd_float3)value index:(int)index {
+}
+
+- (void)setFragmentValue4:(simd_float4)value index:(int)index {
+}
+
+- (void)setInValue1:(simd_float1)inValue {
+}
+
+- (void)setInValue2:(simd_float2)inValue {
+}
+
+- (void)setInValue3:(simd_float3)inValue {
+}
+
+- (void)setInValue4:(simd_float4)inValue {
+}
+
+- (void)setVertexValue1:(simd_float1)value index:(int)index {
+}
+
+- (void)setVertexValue2:(simd_float2)value index:(int)index {
+}
+
+- (void)setVertexValue3:(simd_float3)value index:(int)index {
+}
+
+- (void)setVertexValue4:(simd_float4)value index:(int)index {
+}
+
 @end

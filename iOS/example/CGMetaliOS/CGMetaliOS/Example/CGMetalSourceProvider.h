@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@import CoreVideo;
+#import <CoreVideo/CoreVideo.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

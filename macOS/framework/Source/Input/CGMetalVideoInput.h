@@ -5,11 +5,11 @@
 //  Created by Jason on 2021/12/1.
 //
 
-#import "CGMetalOutput.h"
-#import "CGMetalPixelBufferInput.h"
+#import <CGMetalMac/CGMetalOutput.h>
+#import <CGMetalMac/CGMetalPixelBufferInput.h>
 
-@import AVFoundation;
-
+//@import AVFoundation;
+#import <AVFoundation/AVFoundation.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CGMetalVideoInfo : NSObject

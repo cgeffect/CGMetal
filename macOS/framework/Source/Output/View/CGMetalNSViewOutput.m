@@ -6,13 +6,13 @@
 //
 
 
-#import "CGMetalNSViewOutput.h"
+#import <CGMetalMac/CGMetalNSViewOutput.h>
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 #else
-#import "CGMetalOutput.h"
-#import "CGMetalRender.h"
-#import "CGMetalDevice.h"
-@import Metal;
+#import <CGMetalMac/CGMetalOutput.h>
+#import <CGMetalMac/CGMetalRender.h>
+#import <CGMetalMac/CGMetalDevice.h>
+#import <Metal/Metal.h>
 
 #define VertexShader @"CGRenderVertexShader"
 #define FragmentShader @"CGRenderFragmentShader"

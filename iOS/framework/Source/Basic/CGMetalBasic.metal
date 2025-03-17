@@ -1,5 +1,24 @@
 #include "CGMetalHeader.h"
 #include <simd/simd.h>
+
+#include <metal_stdlib>
+using namespace metal;
+typedef struct
+{
+    float4 position [[position]];
+    float2 texCoordinate;
+
+} VertexOut;
+//线性插值, 抗锯齿, nearest会出现锯齿
+constexpr sampler texSampler(
+                             filter::linear,
+                             mag_filter::linear,
+                             min_filter::linear,
+                             coord::normalized,
+                             address::clamp_to_edge
+//                             address::clamp_to_zero
+                             );
+
 //VertexOut 返回数据类型->片元函数
 // vertex_id是顶点shader每次处理的index，用于定位当前的顶点
 // buffer表明是缓存数据，0是索引

@@ -5,9 +5,10 @@
 //  Created by Jason on 2021/5/27.
 //
 
-@import Foundation;
-@import Metal;
-@import CoreGraphics;
+#import <Foundation/Foundation.h>
+#import <Metal/Metal.h>
+//@import CoreGraphics;
+#import <CoreGraphics/CoreGraphics.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -5,7 +5,7 @@
 //  Created by Jason on 2021/12/27.
 //
 
-#import "CGMetalOpenGLOutput.h"
+#import <CGMetal/CGMetalOpenGLOutput.h>
 
 @implementation CGMetalOpenGLOutput
 
