@@ -78,3 +78,6 @@ iOS10以上, Xcode 13及其以上
 [Processing a Texture in a Compute Function](https://developer.apple.com/documentation/metal/compute_passes/processing_a_texture_in_a_compute_function)<br/>
 [Synchronizing CPU and GPU Work](https://developer.apple.com/documentation/metal/resource_synchronization/synchronizing_cpu_and_gpu_work)<br/>
 [Performing Calculations on a GPU](https://developer.apple.com/documentation/metal/performing_calculations_on_a_gpu)
+
+项目借鉴了GPUImage的设计理念, 简化了代码与增加了一些输入和输出源, 是一个不错的对Metal技术综合实践的项目. <br/>
+也可以看看我的另外一个使用OpenGL ES的项目https://github.com/cgeffect/CGPixel

@@ -96,10 +96,10 @@
     id<CAMetalDrawable> currentDrawable = [_metalLayer nextDrawable];
     [_mtlRender setOutTexture:currentDrawable.texture index:0];
     id<MTLCommandBuffer> commandBuffer = [_commandQueue commandBuffer];
-    commandBuffer.label = @<CGMetalMac/CGMetalView Command Buffer";
+    commandBuffer.label = @"<CGMetalMac/CGMetalView Command Buffer";
     
     id<MTLRenderCommandEncoder> encoder = [commandBuffer renderCommandEncoderWithDescriptor: _mtlRender.renderTargetDescriptor];
-    encoder.label = @<CGMetalMac/CGMetalView Command Encoder";
+    encoder.label = @"<CGMetalMac/CGMetalView Command Encoder";
     
     CGRect viewPort = [self glPrepareViewport:width height:height];
     int x = (int) viewPort.origin.x;

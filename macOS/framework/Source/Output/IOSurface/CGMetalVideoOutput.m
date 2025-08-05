@@ -90,8 +90,8 @@
 
 @end
 
-@import VideoToolbox;
-@import AVFoundation;
+#import <VideoToolbox/VideoToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 typedef NS_ENUM (NSInteger, CGMetelEncodeStatus) {
     CGMetelEncodeStatusNone = 0,
